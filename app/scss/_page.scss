@@ -1,0 +1,60 @@
+.Page {
+  &--padding {
+    padding: 4rem 0;
+  }
+  &--50 {
+    .Page__figure, .Page__content {
+      width: 50%;
+      p {
+        width: 100%;
+      }
+    }
+  }
+  &--bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &--carousel {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+}
+.Page__content {
+  padding: 3rem;
+}
+.Page__title {
+  color: $firstColor;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 100%;
+  span {
+    display: inline-block;
+    &::after {
+      background-color: $firstColor;
+      content: "";
+      display: block;
+      height: 3px;
+      width: 30px;
+    }
+  }
+  &--white {
+    color: white;
+    span {
+      &::after {
+        background-color: white;
+      }
+    }
+  }
+}
+.Page__subtitle {
+  color: $firstColor;
+  font-size: 3rem;
+  font-weight: 400;
+  width: 100%;
+  &--white {
+    color: white;
+  }
+  span {
+    font-weight: 700;
+  }
+}

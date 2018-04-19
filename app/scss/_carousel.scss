@@ -1,0 +1,70 @@
+.Carousel {
+  &--front {
+  }
+  &--info {
+    .Carousel__caption {
+      padding: 0 8rem;
+    }
+  }
+}
+.Carousel__inner {
+}
+.Carousel__item {
+  img {
+    object-fit: contain;
+  }
+}
+.Carousel__caption {
+  align-content: center;
+  bottom: 0;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  left: auto;
+  right: 0;
+  padding: 0 3rem;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  text-align: left;
+}
+.Carousel__caption__header, .Carousel__caption__text {
+  width: 100%;
+}
+.Carousel__caption__header {
+  border-left: 5px solid $secondColor;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+.Carousel__caption__subtitle {
+  color: white;
+  font-size: 3.5rem;
+  width: 100%;
+}
+.Carousel__caption__title {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  width: 100%;
+}
+.Carousel__caption__text {
+  font-size: 1.25rem;
+  font-weight: 300;
+  width: 100%;
+}
+.Carousel__prev, .Carousel__next {
+  opacity: 1;
+  width: 5%;
+  [class^="icon-"] {
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 2.5rem;
+  }
+  &:focus, &:hover {
+    color: $thirdColor;
+    opacity: 1;
+    [class^="icon-"] {
+      border-color: $thirdColor;
+    }
+  }
+}

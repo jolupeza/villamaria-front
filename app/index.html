@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Colegio Villa María - Miraflores</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="Header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-3">
+          <h1 class="Header__logo text-center mb-0" data-image="images/logo.png" data-imagehover="images/logo-hover.png">
+            <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
+              <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
+            </a>
+          </h1>
+        </div>
+        <div class="col-9">
+          <aside class="Header__top">
+            <nav class="Header__navTop">
+              <ul class="Header__menuTop">
+                <li class="active">
+                  <a href="">
+                    <i class="icon-mail-envelope-open"></i>Admisión
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="submenu">
+                    <i class="icon-world"></i>Intranet<i class="icon-keyboard_arrow_down Header__menuTop__caret"></i>
+                  </a>
+                  <ul class="Header__menuTop__submenu">
+                    <li><a href="">Intranet</a></li>
+                    <li><a href="">Biblioteca</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <nav class="Header__navSocial">
+              <span class="Header__legendSocial text-uppercase">Síguenos:</span>
+              <ul class="Header__listSocial">
+                <li><a href="" target="_blank" rel="noopener noreferrer"><i class="icon-facebook"></i></a></li>
+                <li><a href="" target="_blank" rel="noopener noreferrer"><i class="icon-instagram"></i></a></li>
+                <li><a href="" target="_blank" rel="noopener noreferrer"><i class="icon-youtube-play"></i></a></li>
+              </ul>
+            </nav>
+          </aside>
+          <nav class="Header__navMain mt-2 hide" id="js-main-menu-scroll">
+            <ul class="Header__listMain">
+              <li class="active"><a href="">El colegio</a></li>
+              <li><a href="">Propuesta formativa</a></li>
+              <li><a href="">Pastoral</a></li>
+              <li><a href="">Servicios</a></li>
+              <li><a href="">Vida escolar</a></li>
+              <li><a href="">Ubícanos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <nav class="Header__navMain mt-3" id="js-main-menu">
+        <ul class="Header__listMain">
+          <li class="active"><a href="">El colegio</a></li>
+          <li><a href="">Propuesta formativa</a></li>
+          <li><a href="">Pastoral</a></li>
+          <li><a href="">Servicios</a></li>
+          <li><a href="">Vida escolar</a></li>
+          <li><a href="">Ubícanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="Front">
+    <div id="carouselFront" class="carousel slide Carousel Carousel--front" data-ride="carousel">
+      <div class="carousel-inner Carousel__inner">
+        <div class="carousel-item active Carousel__item">
+          <img class="d-block w-100 img-fluid" src="images/portada.jpg" alt="Portada">
+          <div class="carousel-caption Carousel__caption">
+            <header class="Carousel__caption__header">
+              <h3 class="Carousel__caption__subtitle text-uppercase">Colegio</h3>
+              <h2 class="Carousel__caption__title text-uppercase">Villa María</h2>
+            </header>
+            <p class="Carousel__caption__text">Enseñar y educar es nuestra vocación</p>
+            <p class="Carousel__caption__text text-center">
+              <a href="#" class="Button Button--ghost">ver nuestra propuesta <i class="icon-arrow-right"></i></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="Front__message">
+      <p class="text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+    </aside>
+  </section>
+
+  <section class="Page Page--50 d-flex">
+    <figure class="Page__figure mb-0">
+      <img src="images/colegio-page.jpg" alt="El Colegio" class="img-fluid d-lg-block">
+    </figure>
+    <article class="Page__content d-flex flex-wrap">
+      <h2 class="h4 Page__title text-uppercase"><span>El Colegio</span></h2>
+      <h3 class="Page__subtitle text-uppercase">Bienvenidos al <span>Colegio</span></h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure asperiores officia, voluptatibus maiores atque quasi qui dolores. Maxime quia possimus, facilis commodi, quo obcaecati nostrum, dolores a voluptatum, ducimus natus?</p>
+      <p class="text-center">
+        <a href="#" class="Button Button--ghost Button--ghost--second">conocer el colegio <i class="icon-arrow-right"></i></a>
+      </p>
+    </article>
+  </section>
+
+  <section class="Page Page--padding Page--bg" style="background-image: url('./images/propuesta-page.jpg');" id="accordion-propuesta">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="h4 Page__title Page__title--white text-uppercase text-center"><span>Propuesta Educativa</span></h2>
+          <h3 class="Page__subtitle Page__subtitle--white text-uppercase text-center">Pensamos en <span>el mañana</span></h3>
+        </div>
+      </div>
+      <div class="row align-items-center mt-5">
+        <div class="col-4">
+          <p class="text-center mb-5">
+            <button class="Button Button--large Button--ghost active text-uppercase Btn-collapse Btn-collapse-inicial" type="button" data-toggle="collapse" data-target="#propuesta-inicial" aria-expanded="true" aria-controls="propuesta-inicial">Inicial</button>
+          </p>
+          <p class="text-center">
+            <button class="Button Button--large Button--ghost text-uppercase Btn-collapse Btn-collapse-primaria" type="button" data-toggle="collapse" data-target="#propuesta-primaria" aria-expanded="false" aria-controls="propuesta-primaria">Primaria</button>
+          </p>
+        </div>
+        <div class="col-8">
+          <div class="collapse multi-collapse show" id="propuesta-inicial" data-parent="#accordion-propuesta">
+            <article class="text-white">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse magni excepturi enim reiciendis quas alias, libero aliquid, tenetur vero numquam recusandae cupiditate animi voluptas qui, facilis provident consectetur velit! Inicial</p>
+
+              <section class="Box Box--white row mt-5 mb-5">
+                <div class="col-4">
+                  <article class="Box__item">
+                    <figure class="Box__figure text-center"></figure>
+                    <div class="Box__content text-center">
+                      <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-4">
+                  <article class="Box__item">
+                    <figure class="Box__figure text-center"></figure>
+                    <div class="Box__content text-center">
+                      <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-4">
+                  <article class="Box__item">
+                    <figure class="Box__figure text-center"></figure>
+                    <div class="Box__content text-center">
+                      <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <p class="text-center">
+                <a href="#" class="Button Button--ghost">ver toda la propuesta <i class="icon-arrow-right"></i></a>
+              </p>
+            </article>
+          </div>
+
+          <div class="collapse multi-collapse" id="propuesta-primaria" data-parent="#accordion-propuesta">
+            <article class="text-white">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse magni excepturi enim reiciendis quas alias, libero aliquid, tenetur vero numquam recusandae cupiditate animi voluptas qui, facilis provident consectetur velit! Primaria</p>
+
+              <section class="Box Box--white row mt-5 mb-5">
+                <div class="col-4">
+                  <article class="Box__item">
+                    <figure class="Box__figure text-center"></figure>
+                    <div class="Box__content text-center">
+                      <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-4">
+                  <article class="Box__item">
+                    <figure class="Box__figure text-center"></figure>
+                    <div class="Box__content text-center">
+                      <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-4">
+                  <article class="Box__item">
+                    <figure class="Box__figure text-center"></figure>
+                    <div class="Box__content text-center">
+                      <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                    </div>
+                  </article>
+                </div>
+              </section>
+
+              <p class="text-center">
+                <a href="#" class="Button Button--ghost">ver toda la propuesta <i class="icon-arrow-right"></i></a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="Page Page--padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-4">
+          <h2 class="h4 Page__title text-uppercase"><span>Servicios</span></h2>
+          <h3 class="Page__subtitle text-uppercase">Ofrecemos al <span>estudiante</span></h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat temporibus, maiores dolore distinctio voluptatem iure quae non deleniti soluta, in dignissimos sapiente voluptates facere earum. Nostrum ex, quae alias soluta!</p>
+          <p class="text-center">
+            <a href="#" class="Button Button--ghost Button--ghost--second">ver todos los servicios <i class="icon-arrow-right"></i></a>
+          </p>
+        </div>
+        <div class="col-8">
+          <section class="Box row">
+            <div class="col-4">
+              <article class="Box__item">
+                <figure class="Box__figure text-center"></figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-4">
+              <article class="Box__item">
+                <figure class="Box__figure text-center"></figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-4">
+              <article class="Box__item">
+                <figure class="Box__figure text-center"></figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-4">
+              <article class="Box__item">
+                <figure class="Box__figure text-center"></figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-4">
+              <article class="Box__item">
+                <figure class="Box__figure text-center"></figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+              </article>
+            </div>
+            <div class="col-4">
+              <article class="Box__item">
+                <figure class="Box__figure text-center"></figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Espacios diversos</h4>
+                  <p>Lorem ipsum dolor sit amet, consectetur.</p>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="Page Page--carousel">
+    <div id="carouselInfo" class="carousel slide Carousel Carousel--info" data-ride="carousel">
+      <div class="carousel-inner Carousel__inner">
+        <div class="carousel-item active Carousel__item">
+          <img class="d-block w-100 img-fluid" src="images/slider-01.jpg" alt="Slide 01" />
+          <div class="carousel-caption Carousel__caption text-right">
+            <h2 class="Carousel__caption__title text-uppercase">Lorem ipsum dolor</h2>
+            <h3 class="Carousel__caption__subtitle text-uppercase">sit amet</h3>
+          </div>
+        </div>
+        <div class="carousel-item Carousel__item">
+          <img class="d-block w-100 img-fluid" src="images/slider-01.jpg" alt="Slide 02" />
+          <div class="carousel-caption Carousel__caption text-right">
+            <h2 class="Carousel__caption__title text-uppercase">Consectetur adipisicing</h2>
+            <h3 class="Carousel__caption__subtitle text-uppercase">sapiente, iusto</h3>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev Carousel__prev" href="#carouselInfo" role="button" data-slide="prev">
+        <i class="icon-keyboard_arrow_left"></i>
+      </a>
+      <a class="carousel-control-next Carousel__next" href="#carouselInfo" role="button" data-slide="next">
+        <i class="icon-keyboard_arrow_right"></i>
+      </a>
+    </div>
+  </section>
+
+  <section class="Page Page--padding Page--bg" style="background-image: url('./images/blog-page.jpg');">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="h4 Page__title text-uppercase text-center"><span>Vida Escolar</span></h2>
+          <h3 class="Page__subtitle text-uppercase text-center">Hoy en la <span>escuela</span></h3>
+        </div>
+      </div>
+      <section class="Cards mt-5">
+        <div class="row">
+          <div class="col-4">
+            <article class="Card">
+              <figure class="Card__figure">
+                <img class="img-fluid d-block m-auto" src="images/post-thumb.jpg" alt="Post 01" />
+              </figure>
+              <div class="Card__content">
+                <h3 class="h4 Card__title">
+                  <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                </h3>
+                <h5 class="Card__date">20/02/2017</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur quia enim quaerat assumenda perspiciatis illo.</p>
+                <p class="text-center">
+                  <a href="#" class="Button Button--ghost Button--ghost--second">ver más <i class="icon-arrow-right"></i></a>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-4">
+            <article class="Card">
+              <figure class="Card__figure">
+                <img class="img-fluid d-block m-auto" src="images/post-thumb.jpg" alt="Post 01" />
+              </figure>
+              <div class="Card__content">
+                <h3 class="h4 Card__title">
+                  <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                </h3>
+                <h5 class="Card__date">20/02/2017</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur quia enim quaerat assumenda perspiciatis illo.</p>
+                <p class="text-center">
+                  <a href="#" class="Button Button--ghost Button--ghost--second">ver más <i class="icon-arrow-right"></i></a>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-4">
+            <article class="Card">
+              <figure class="Card__figure">
+                <img class="img-fluid d-block m-auto" src="images/post-thumb.jpg" alt="Post 01" />
+              </figure>
+              <div class="Card__content">
+                <h3 class="h4 Card__title">
+                  <a href="#">Lorem ipsum dolor sit amet, consectetur.</a>
+                </h3>
+                <h5 class="Card__date">20/02/2017</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur quia enim quaerat assumenda perspiciatis illo.</p>
+                <p class="text-center">
+                  <a href="#" class="Button Button--ghost Button--ghost--second">ver más <i class="icon-arrow-right"></i></a>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <p class="mt-5 text-center">
+          <a href="#" class="Button Button--ghost Button--ghost--third">ver toda la vida escolar <i class="icon-arrow-right"></i></a>
+        </p>
+      </section>
+    </div>
+  </section>
+
+  <section class="Page Page--padding">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2 class="h4 Page__title text-uppercase text-center"><span>Congregación</span></h2>
+          <h3 class="Page__subtitle text-uppercase text-center">Nuestros <span>aliados</span></h3>
+        </div>
+      </div>
+
+      <section class="Box row mt-5">
+        <div class="col-4">
+          <article class="Box__item">
+            <figure class="Box__figure">
+              <img src="images/aliado01.jpg" alt="Aliado 01" class="img-fluid d-block m-auto">
+            </figure>
+          </article>
+        </div>
+        <div class="col-4">
+          <article class="Box__item">
+            <figure class="Box__figure">
+              <img src="images/aliado02.jpg" alt="Aliado 01" class="img-fluid d-block m-auto">
+            </figure>
+          </article>
+        </div>
+        <div class="col-4">
+          <article class="Box__item">
+            <figure class="Box__figure">
+              <img src="images/aliado03.jpg" alt="Aliado 01" class="img-fluid d-block m-auto">
+            </figure>
+          </article>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <footer class="Footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-3">
+          <nav class="Footer__nav">
+            <ul class="Footer__list text-uppercase">
+              <li><a href="#">Apafa</a></li>
+              <li><a href="#">Biblioteca</a></li>
+              <li><a href="#">Congregación IHM</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-6">
+          <h1 class="Footer__logo text-center">
+            <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
+              <img class="img-fluid" src="images/logo.png" alt="Colegio Villa María - Miraflores" />
+            </a>
+          </h1>
+        </div>
+        <div class="col-3">
+          <nav class="Footer__nav">
+            <ul class="Footer__list">
+              <li><i class="icon-phone"></i> 445-0547 / 445-3592</li>
+              <li><i class="icon-mail"></i> villamaria@vmm.edu.pe</li>
+              <li><i class="icon-map-pin"></i> Calle Contralmirante Montero 225- Miraflores</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="ArrowTop"><i class="icon-keyboard_arrow_up"></i></button>
+
+  <script type="text/javascript" src="js/min/bundle.js"></script>
+  <script type="text/javascript" src="js/min/script.js"></script>
+</body>
+</html>

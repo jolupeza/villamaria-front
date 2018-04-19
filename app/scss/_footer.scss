@@ -1,0 +1,23 @@
+.Footer {
+  background-color: $firstColor;
+  padding: 3rem 0;
+}
+.Footer__nav {
+
+}
+.Footer__list {
+  margin-bottom: 0;
+  padding-left: 0;
+  li {
+    color: white;
+    font-size: 1rem;
+    list-style: none;
+    margin-bottom: .5em;
+    a {
+      color: white;
+      &:focus, &:hover {
+        color: $thirdColor;
+      }
+    }
+  }
+}

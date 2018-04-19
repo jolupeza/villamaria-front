@@ -1,0 +1,13 @@
+.Front {
+  height: 100vh;
+  position: relative;
+}
+.Front__message {
+  background-color: rgba($firstColor, .77);
+  bottom: 0;
+  color: white;
+  padding: 1rem 0;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}

@@ -1,0 +1,79 @@
+.Button {
+  background-color: $firstColor;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.375rem;
+  font-weight: 300;
+  padding: .8rem 2rem;
+  transition: background-color .2s ease-in-out, border-color .3s ease;
+  &:focus, &:hover {
+    background-color: lighten($firstColor, 8%);
+    color: white;
+  }
+  &--success {
+    background-color: $thirdColor;
+    &:focus, &:hover {
+      background-color: lighten($thirdColor, 8%);
+    }
+  }
+  &--danger {
+    background-color: $accentColor;
+    &:focus, &:hover {
+      background-color: lighten($accentColor, 8%);
+    }
+  }
+  &--secundary {
+    background-color: $secondColor;
+    &:focus, &:hover {
+      background-color: lighten($secondColor, 8%);
+    }
+  }
+  &--ghost {
+    background-color: transparent;
+    border: 1px solid white;
+    &.active, &:focus, &:hover {
+      background-color: $thirdColor;
+      border-color: $thirdColor;
+    }
+    &--second {
+      border-color: $secondColor;
+      color: $secondColor;
+      &:focus, &:hover {
+        background-color: $secondColor;
+        border-color: $secondColor;
+      }
+    }
+    &--third {
+      border-color: $thirdColor;
+      color: $thirdColor;
+      &:focus, &:hover {
+        background-color: $thirdColor;
+        border-color: $thirdColor;
+      }
+    }
+  }
+  &--lg {
+    font-size: 1.875rem;
+    padding: 1rem 2.5rem;
+    @media screen and (max-width: 575px) {
+      font-size: 1.5rem;
+      padding: 1rem;
+    }
+  }
+  &--sm {
+    font-size: 1.25rem;
+    padding: .5rem 1.5rem;
+  }
+  &--xs {
+    font-size: 1.125rem;
+    padding: .3rem 1rem
+  }
+  &--large {
+    border-radius: .8rem;
+    width: 80%;
+    padding: .5rem 0;
+  }
+}
