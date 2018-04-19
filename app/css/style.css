@@ -10249,6 +10249,7 @@ li {
         color: #e14e3f; }
 
 .Front {
+  background-color: rgba(31, 55, 108, 0.77);
   height: 100vh;
   position: relative; }
 
@@ -10260,6 +10261,11 @@ li {
   position: absolute;
   width: 100%;
   z-index: 9; }
+
+.Carousel--front {
+  height: 100%; }
+  .Carousel--front .Carousel__inner, .Carousel--front .Carousel__item {
+    height: 100%; }
 
 .Carousel--info .Carousel__caption {
   padding: 0 8rem; }
@@ -10285,6 +10291,13 @@ li {
   top: 0;
   width: 50%;
   text-align: left; }
+  .Carousel__caption--left {
+    left: 0;
+    right: auto; }
+  .Carousel__caption--bottom {
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+    margin-bottom: 6rem; }
 
 .Carousel__caption__header, .Carousel__caption__text {
   width: 100%; }

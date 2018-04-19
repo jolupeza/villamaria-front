@@ -1,5 +1,9 @@
 .Carousel {
   &--front {
+    height: 100%;
+    .Carousel__inner, .Carousel__item {
+      height: 100%;
+    }
   }
   &--info {
     .Carousel__caption {
@@ -27,6 +31,14 @@
   top: 0;
   width: 50%;
   text-align: left;
+  &--left {
+    left: 0;
+    right: auto;
+  }
+  &--bottom {
+    align-content: flex-end;
+    margin-bottom: 6rem;
+  }
 }
 .Carousel__caption__header, .Carousel__caption__text {
   width: 100%;
