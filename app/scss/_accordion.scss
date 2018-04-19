@@ -1,0 +1,89 @@
+.Accordion {
+  display: flex;
+  &--portrait {
+    flex-wrap: wrap;
+    .Accordion__nav {
+      margin-bottom: .8rem;
+      width: 100%;
+    }
+    .Accordion__list {
+      border-top: 2px solid rgba($accentColor, .45);
+      display: flex;
+      justify-content: space-around;
+      padding: 0 .5rem;
+      li {
+        text-align: center;
+        a {
+          &::after {
+            height: 2px;
+            left: 0;
+            top: -2px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .Accordion__content {
+      width: 100%;
+    }
+  }
+  &--landscape {
+    .Accordion__nav {
+      width: 20%;
+    }
+    .Accordion__list {
+      border-right: 2px solid rgba($accentColor, .45);
+      li {
+        text-align: right;
+        a {
+          &::after {
+            height: 100%;
+            right: -2px;
+            top: 0;
+            width: 2px;
+          }
+        }
+      }
+    }
+    .Accordion__content {
+      width: 80%;
+    }
+  }
+}
+.Accordion__nav {
+
+}
+.Accordion__list {
+  list-style: none;
+  margin-bottom: 0;
+  padding: .5rem 0;
+  li {
+    font-size: 1.25rem;
+    font-weight: 300;
+    a {
+      color: rgba($accentColor, .45);
+      display: block;
+      padding: .5rem .8rem;
+      position: relative;
+      &.active, &:focus, &:hover {
+        color: $thirdColor;
+        &::after {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      &::after {
+        background-color: $thirdColor;
+        content: "";
+        display: block;
+        opacity: 0;
+        position: absolute;
+        transition: opacity .3s ease-out, transform .2s ease-in;
+        transform: scale(0);
+      }
+    }
+  }
+}
+.Accordion__content {
+  padding: 1rem;
+}

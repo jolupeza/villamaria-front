@@ -121,6 +121,15 @@ function verifyMedia () {
       buttons.removeClass('active');
       $(button).addClass('active');
     });
+
+    $('[data-namecollapse^="collapse-"]').on('show.bs.collapse', function (ev) {
+      var $this = $(ev.target),
+          buttons = $this.parent().prev('.Accordion__nav').find('.Accordion__list a'),
+          button = '.Collapse--' + $this.attr('id');
+
+      buttons.removeClass('active');
+      $(button).addClass('active');
+    });
   });
 })(jQuery);
 //# sourceMappingURL=script.js.map

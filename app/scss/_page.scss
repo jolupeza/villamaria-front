@@ -58,3 +58,12 @@
     font-weight: 700;
   }
 }
+.Page__notice {
+  &:nth-child(even) {
+    .col-4 {
+      &:first-child {
+        order: 2;
+      }
+    }
+  }
+}

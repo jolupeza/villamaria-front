@@ -9862,7 +9862,7 @@ a {
   -webkit-transition: color .3s ease-out, background-color .2s ease-in-out;
   transition: color .3s ease-out, background-color .2s ease-in-out; }
   a.hover, a:focus, a:hover {
-    color: #348fce;
+    color: #e14e3f;
     text-decoration: none; }
 
 blockquote {
@@ -9954,7 +9954,7 @@ li {
   color: #e14e3f; }
 
 .accentColor {
-  color: #c43f49; }
+  color: #3a3a3a; }
 
 .darkColor {
   color: #2f2f2f; }
@@ -9975,7 +9975,7 @@ li {
   background-color: #e14e3f; }
 
 .accentColorBg {
-  background-color: #c43f49; }
+  background-color: #3a3a3a; }
 
 .darkColorBg {
   background-color: #2f2f2f; }
@@ -10356,9 +10356,9 @@ li {
     .Button--success:focus, .Button--success:hover {
       background-color: #e76f62; }
   .Button--danger {
-    background-color: #c43f49; }
+    background-color: #3a3a3a; }
     .Button--danger:focus, .Button--danger:hover {
-      background-color: #ce5e67; }
+      background-color: #4e4e4e; }
   .Button--secundary {
     background-color: #348fce; }
     .Button--secundary:focus, .Button--secundary:hover {
@@ -10446,6 +10446,11 @@ li {
   .Page__subtitle span {
     font-weight: 700; }
 
+.Page__notice:nth-child(even) .col-4:first-child {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2; }
+
 .Box--white .Box__title {
   color: white; }
 
@@ -10455,5 +10460,94 @@ li {
 
 .Card__date {
   color: #767676; }
+
+.Breadcrumb {
+  background-color: transparent;
+  border-radius: 0; }
+  .Breadcrumb li {
+    margin-right: 2rem; }
+    .Breadcrumb li:last-child {
+      margin-right: 0; }
+  .Breadcrumb .active {
+    font-weight: 700; }
+  .Breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    margin-right: 2rem; }
+
+.Accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .Accordion--portrait {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .Accordion--portrait .Accordion__nav {
+      margin-bottom: .8rem;
+      width: 100%; }
+    .Accordion--portrait .Accordion__list {
+      border-top: 2px solid rgba(58, 58, 58, 0.45);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      padding: 0 .5rem; }
+      .Accordion--portrait .Accordion__list li {
+        text-align: center; }
+        .Accordion--portrait .Accordion__list li a::after {
+          height: 2px;
+          left: 0;
+          top: -2px;
+          width: 100%; }
+    .Accordion--portrait .Accordion__content {
+      width: 100%; }
+  .Accordion--landscape .Accordion__nav {
+    width: 20%; }
+  .Accordion--landscape .Accordion__list {
+    border-right: 2px solid rgba(58, 58, 58, 0.45); }
+    .Accordion--landscape .Accordion__list li {
+      text-align: right; }
+      .Accordion--landscape .Accordion__list li a::after {
+        height: 100%;
+        right: -2px;
+        top: 0;
+        width: 2px; }
+  .Accordion--landscape .Accordion__content {
+    width: 80%; }
+
+.Accordion__list {
+  list-style: none;
+  margin-bottom: 0;
+  padding: .5rem 0; }
+  .Accordion__list li {
+    font-size: 1.25rem;
+    font-weight: 300; }
+    .Accordion__list li a {
+      color: rgba(58, 58, 58, 0.45);
+      display: block;
+      padding: .5rem .8rem;
+      position: relative; }
+      .Accordion__list li a.active, .Accordion__list li a:focus, .Accordion__list li a:hover {
+        color: #e14e3f; }
+        .Accordion__list li a.active::after, .Accordion__list li a:focus::after, .Accordion__list li a:hover::after {
+          opacity: 1;
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1); }
+      .Accordion__list li a::after {
+        background-color: #e14e3f;
+        content: "";
+        display: block;
+        opacity: 0;
+        position: absolute;
+        -webkit-transition: opacity .3s ease-out, -webkit-transform .2s ease-in;
+        transition: opacity .3s ease-out, -webkit-transform .2s ease-in;
+        transition: opacity .3s ease-out, transform .2s ease-in;
+        transition: opacity .3s ease-out, transform .2s ease-in, -webkit-transform .2s ease-in;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0); }
+
+.Accordion__content {
+  padding: 1rem; }
 
 /*# sourceMappingURL=maps/style.css.map */
