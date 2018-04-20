@@ -9861,7 +9861,8 @@ body {
     top: 32px; }
 
 a {
-  color: #1f376c;
+  color: #348fce;
+  font-weight: 700;
   -webkit-transition: color .3s ease-out, background-color .2s ease-in-out;
   transition: color .3s ease-out, background-color .2s ease-in-out; }
   a.hover, a:focus, a:hover {
@@ -10449,6 +10450,9 @@ li {
   .Page__subtitle span {
     font-weight: 700; }
 
+.Page__resalt {
+  font-size: 2.375rem; }
+
 .Page__notice:nth-child(even) .col-4:first-child {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
@@ -10460,6 +10464,18 @@ li {
 .Box--white .Box__figure [class^="icon-"] {
   border-color: white;
   color: white; }
+
+.Box__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .Box__wrapper .Box__item {
+    width: 18%; }
 
 .Box__item {
   margin-bottom: 1rem; }
@@ -10490,6 +10506,11 @@ li {
     font-weight: 700; }
   .Breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     margin-right: 2rem; }
+  .Breadcrumb .breadcrumb-item a {
+    color: #252525;
+    font-weight: 300; }
+    .Breadcrumb .breadcrumb-item a:focus, .Breadcrumb .breadcrumb-item a:hover {
+      text-decoration: underline; }
 
 .Accordion {
   display: -webkit-box;
@@ -10566,6 +10587,37 @@ li {
         transform: scale(0); }
 
 .Accordion__content {
+  padding: 1rem; }
+
+.Tabs {
+  margin: 1.5rem 0; }
+
+.Tabs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 1.5rem; }
+
+.Tabs__list__item {
+  margin-right: 2rem; }
+  .Tabs__list__item:last-child {
+    margin-right: 0; }
+
+.Tabs__list__link {
+  border: 1px solid #1f376c;
+  border-radius: 3rem;
+  color: #1f376c;
+  padding: .5rem 2rem;
+  text-transform: uppercase; }
+  .Tabs__list__link.active, .Tabs__list__link:focus, .Tabs__list__link:hover {
+    background-color: #348fce;
+    border-color: #348fce;
+    color: white; }
+
+.Tabs__content {
   padding: 1rem; }
 
 /*# sourceMappingURL=maps/style.css.map */

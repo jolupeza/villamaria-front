@@ -10,7 +10,8 @@ body {
   }
 }
 a {
-  color: $firstColor;
+  color: $secondColor;
+  font-weight: 700;
   transition: color .3s ease-out, background-color .2s ease-in-out;
   &.hover, &:focus, &:hover {
     color: $thirdColor;

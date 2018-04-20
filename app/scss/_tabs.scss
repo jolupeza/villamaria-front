@@ -1,0 +1,29 @@
+.Tabs {
+  margin: 1.5rem 0;
+}
+.Tabs__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.Tabs__list__item {
+  margin-right: 2rem;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.Tabs__list__link {
+  border: 1px solid $firstColor;
+  border-radius: 3rem;
+  color: $firstColor;
+  padding: .5rem 2rem;
+  text-transform: uppercase;
+  &.active, &:focus, &:hover {
+    background-color: $secondColor;
+    border-color: $secondColor;
+    color: white;
+  }
+}
+.Tabs__content {
+  padding: 1rem;
+}

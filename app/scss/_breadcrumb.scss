@@ -16,5 +16,12 @@
         margin-right: 2rem;
       }
     }
+    a {
+      color: $textColor;
+      font-weight: 300;
+      &:focus, &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
