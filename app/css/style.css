@@ -10481,7 +10481,7 @@ li {
   margin-bottom: 1rem; }
 
 .Box__figure [class^="icon-"] {
-  border: 2px solid rgba(118, 118, 118, 0.3);
+  border: 2px solid rgba(147, 146, 146, 0.3);
   border-radius: 50%;
   color: #e14e3f;
   display: inline-block;
@@ -10489,11 +10489,11 @@ li {
   padding: 1rem; }
 
 .Card__figure {
-  border: 1px solid #767676;
+  border: 1px solid #939292;
   border-radius: .8rem; }
 
 .Card__date {
-  color: #767676; }
+  color: #939292; }
 
 .Breadcrumb {
   background-color: transparent;
@@ -10619,5 +10619,28 @@ li {
 
 .Tabs__content {
   padding: 1rem; }
+
+.Form__label--check {
+  color: #939292; }
+  .Form__label--check a {
+    color: #939292; }
+    .Form__label--check a:focus, .Form__label--check a:hover {
+      color: #348fce; }
+
+.Form__control {
+  border-color: #939292;
+  color: #939292;
+  padding: .8rem .75rem; }
+  .Form__control::-webkit-input-placeholder {
+    font-weight: 300; }
+  .Form__control:-ms-input-placeholder {
+    font-weight: 300; }
+  .Form__control::-ms-input-placeholder {
+    font-weight: 300; }
+  .Form__control::placeholder {
+    font-weight: 300; }
+
+select.Form__control:not([size]):not([multiple]) {
+  height: auto; }
 
 /*# sourceMappingURL=maps/style.css.map */
