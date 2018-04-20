@@ -9759,8 +9759,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("./../fonts/icomoon.eot?lzks0h");
-  src: url("./../fonts/icomoon.eot?lzks0h#iefix") format("embedded-opentype"), url("./../fonts/icomoon.ttf?lzks0h") format("truetype"), url("./../fonts/icomoon.woff?lzks0h") format("woff"), url("./../fonts/icomoon.svg?lzks0h#icomoon") format("svg");
+  src: url("./../fonts/icomoon.eot?tzb7kk");
+  src: url("./../fonts/icomoon.eot?tzb7kk#iefix") format("embedded-opentype"), url("./../fonts/icomoon.ttf?tzb7kk") format("truetype"), url("./../fonts/icomoon.woff?tzb7kk") format("woff"), url("./../fonts/icomoon.svg?tzb7kk#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -9776,6 +9776,15 @@ a.text-dark:hover, a.text-dark:focus {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-rotate:before {
+  content: "\e917"; }
+
+.icon-world:before {
+  content: "\e901"; }
+
+.icon-mail-envelope-open:before {
+  content: "\e900"; }
 
 .icon-instagram:before {
   content: "\e913"; }
@@ -9842,12 +9851,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .icon-arrow-up:before {
   content: "\e909"; }
-
-.icon-world:before {
-  content: "\e901"; }
-
-.icon-mail-envelope-open:before {
-  content: "\e900"; }
 
 body {
   background-color: #ffffff;
@@ -10453,6 +10456,21 @@ li {
 
 .Box--white .Box__title {
   color: white; }
+
+.Box--white .Box__figure [class^="icon-"] {
+  border-color: white;
+  color: white; }
+
+.Box__item {
+  margin-bottom: 1rem; }
+
+.Box__figure [class^="icon-"] {
+  border: 2px solid rgba(118, 118, 118, 0.3);
+  border-radius: 50%;
+  color: #e14e3f;
+  display: inline-block;
+  font-size: 3rem;
+  padding: 1rem; }
 
 .Card__figure {
   border: 1px solid #767676;

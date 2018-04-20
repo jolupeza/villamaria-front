@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700');
+
 @font-face {
   font-family: 'icomoon';
-  src:  url('./../fonts/icomoon.eot?lzks0h');
-  src:  url('./../fonts/icomoon.eot?lzks0h#iefix') format('embedded-opentype'),
-    url('./../fonts/icomoon.ttf?lzks0h') format('truetype'),
-    url('./../fonts/icomoon.woff?lzks0h') format('woff'),
-    url('./../fonts/icomoon.svg?lzks0h#icomoon') format('svg');
+  src:  url('./../fonts/icomoon.eot?tzb7kk');
+  src:  url('./../fonts/icomoon.eot?tzb7kk#iefix') format('embedded-opentype'),
+    url('./../fonts/icomoon.ttf?tzb7kk') format('truetype'),
+    url('./../fonts/icomoon.woff?tzb7kk') format('woff'),
+    url('./../fonts/icomoon.svg?tzb7kk#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,6 +26,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-rotate:before {
+  content: "\e917";
+}
+.icon-world:before {
+  content: "\e901";
+}
+.icon-mail-envelope-open:before {
+  content: "\e900";
+}
 .icon-instagram:before {
   content: "\e913";
 }
@@ -90,10 +100,4 @@
 }
 .icon-arrow-up:before {
   content: "\e909";
-}
-.icon-world:before {
-  content: "\e901";
-}
-.icon-mail-envelope-open:before {
-  content: "\e900";
 }
