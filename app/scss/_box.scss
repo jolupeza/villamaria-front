@@ -10,6 +10,13 @@
       }
     }
   }
+  &--3 {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .Box__item {
+      width: 33%;
+    }
+  }
 }
 .Box__wrapper {
   display: flex;

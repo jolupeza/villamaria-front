@@ -5,6 +5,40 @@
   display: flex;
   justify-content: center;
   margin-bottom: 1.5rem;
+  &--border {
+    border-bottom: 2px solid $grayColor;
+    .Tabs__list__item {
+      flex: 1 1 auto;
+      font-size: 1.375rem;
+      margin-right: 0;
+      padding: .5rem 2rem;
+      text-align: center;
+    }
+    .Tabs__list__link {
+      border: none;
+      border-radius: 0;
+      color: $grayColor;
+      font-weight: 700;
+      padding: 0;
+      position: relative;
+      &:after {
+        border-bottom: 2px solid transparent;
+        bottom: -10px;
+        content: "";
+        display: block;
+        position: absolute;
+        transition: border-bottom-color .3s ease-in;
+        width: 100%;
+      }
+      &.active, &:focus, &:hover {
+        background-color: transparent;
+        color: $thirdColor;
+        &:after {
+          border-bottom-color: $thirdColor;
+        }
+      }
+    }
+  }
 }
 .Tabs__list__item {
   margin-right: 2rem;
@@ -16,12 +50,20 @@
   border: 1px solid $firstColor;
   border-radius: 3rem;
   color: $firstColor;
+  font-weight: 400;
   padding: .5rem 2rem;
   text-transform: uppercase;
   &.active, &:focus, &:hover {
     background-color: $secondColor;
     border-color: $secondColor;
     color: white;
+  }
+  &--square {
+    border-radius: .3rem;
+    &.active, &:focus, &:hover {
+      background-color: $thirdColor;
+      border-color: $thirdColor;
+    }
   }
 }
 .Tabs__content {

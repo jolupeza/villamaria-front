@@ -32,13 +32,13 @@ function verifyMedia () {
         var $this = $(this),
             animation = $this.data('animation'),
             parent = $this.parent();
-         parent.addClass('animated ' + animation);
+          parent.addClass('animated ' + animation);
       },
       function () {
         var $this = $(this),
             animation = $this.data('animation'),
             parent = $this.parent();
-         parent.removeClass('animated ' + animation);
+          parent.removeClass('animated ' + animation);
       }
     );
     */
@@ -131,5 +131,41 @@ function verifyMedia () {
       $(button).addClass('active');
     });
   });
+})(jQuery);
+"use strict";
+
+;(function ($) {
+  var bxTestimonials = void 0;
+
+  $(function () {
+    initBxSlider($('.testimonials-slider'), 2);
+
+    initBxSlider($('.logros-slider'), 4);
+  });
+
+  function initBxSlider(bxSlider, bxSlides) {
+    var numSlides = bxSlider.find('.Sliders__item').length;
+
+    if (numSlides < bxSlides + 1) {
+      return;
+    }
+
+    var widthBxSlider = bxSlider.width() / 2 - 15,
+        slides = window.matchMedia("(max-width: 767px)").matches ? 1 : bxSlides,
+        marginSlide = window.matchMedia("(max-width: 767px)").matches ? 0 : 15;
+
+    bxTestimonials = bxSlider.bxSlider({
+      auto: true,
+      autoHover: true,
+      pager: false,
+      minSlides: slides,
+      maxSlides: slides,
+      moveSlides: 1,
+      slideMargin: marginSlide,
+      slideWidth: widthBxSlider,
+      prevText: '<i class="icon-keyboard_arrow_left"></i>',
+      nextText: '<i class="icon-keyboard_arrow_right"></i>'
+    });
+  }
 })(jQuery);
 //# sourceMappingURL=script.js.map

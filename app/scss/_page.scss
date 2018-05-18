@@ -18,15 +18,43 @@
     height: 100vh;
     overflow-y: hidden;
   }
+  &--white {
+    .Page__title, .Page__subtitle, p {
+      color: white;
+    }
+  }
+  &--testimonials {
+    background-image: url('./../images/bg-testimonials.jpg');
+  }
+  &--grayColor {
+    background-color: $grayColor;
+  }
 }
 .Page__content {
+  align-content: center;
   padding: 3rem;
+  @media screen and (max-width: 1400px) {
+    padding: 2rem;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 1rem;
+  }
+  p {
+    margin-bottom: 3em;
+    @media screen and (max-width: 1500px) {
+      margin-bottom: 1em;
+    }
+  }
 }
 .Page__title {
   color: $firstColor;
   font-weight: 300;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
   width: 100%;
+  @media screen and (max-width: 1300px) {
+    margin-bottom: 1rem;
+  }
   span {
     display: inline-block;
     &::after {
@@ -50,12 +78,19 @@
   color: $firstColor;
   font-size: 3rem;
   font-weight: 400;
+  margin-bottom: 1.5rem;
   width: 100%;
   &--white {
     color: white;
   }
   span {
     font-weight: 700;
+  }
+  @media screen and (max-width: 1300px) {
+    margin-bottom: 1rem;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 2rem;
   }
 }
 .Page__resalt {

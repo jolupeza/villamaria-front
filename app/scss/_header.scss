@@ -213,11 +213,17 @@
     font-size: .875rem;
     list-style: none;
     text-transform: uppercase;
+    @media screen and (max-width: 1200px) {
+      font-size: .75rem;
+    }
     a {
       color: white;
       display: block;
       padding: .5rem .8rem;
       position: relative;
+      @media screen and (max-width: 1200px) {
+        padding: .5rem;
+      }
       &::before {
         border-top: 4px solid white;
         content: "";

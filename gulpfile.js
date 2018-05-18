@@ -51,6 +51,7 @@ gulp.task('concat', () => {
     config.jsDir + '/main.js',
     config.jsDir + '/header.js',
     config.jsDir + '/collapse.js',
+    config.jsDir + '/bxslider.js',
   ])
   .pipe(sourcemaps.init())
   .pipe(babel({
