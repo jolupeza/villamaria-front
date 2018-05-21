@@ -1,4 +1,7 @@
 .Box {
+  &--padding {
+    padding: 0 2rem;
+  }
   &--white {
     .Box__title {
       color: white;

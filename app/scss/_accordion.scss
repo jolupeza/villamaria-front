@@ -30,6 +30,12 @@
   &--landscape {
     .Accordion__nav {
       width: 20%;
+      &--30 {
+        width: 30%;
+        + .Accordion__content {
+          width: 70%;
+        }
+      }
     }
     .Accordion__list {
       border-right: 2px solid rgba($accentColor, .45);
@@ -51,7 +57,6 @@
   }
 }
 .Accordion__nav {
-
 }
 .Accordion__list {
   list-style: none;

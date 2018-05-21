@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Colegio Villa María - Miraflores</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="Header">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-3">
+          <h1 class="Header__logo text-center mb-0" data-image="images/logo.png" data-imagehover="images/logo-hover.png">
+            <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
+              <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
+            </a>
+          </h1>
+        </div>
+        <div class="col-9">
+          <aside class="Header__top">
+            <nav class="Header__navTop">
+              <ul class="Header__menuTop">
+                <li class="active">
+                  <a href="">
+                    <i class="icon-mail-envelope-open"></i>Admisión
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="submenu">
+                    <i class="icon-world"></i>Intranet<i class="icon-keyboard_arrow_down Header__menuTop__caret"></i>
+                  </a>
+                  <ul class="Header__menuTop__submenu">
+                    <li><a href="">Intranet</a></li>
+                    <li><a href="">Biblioteca</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <nav class="Header__navSocial">
+              <span class="Header__legendSocial text-uppercase">Síguenos:</span>
+              <ul class="Header__listSocial">
+                <li><a href="" target="_blank" rel="noopener noreferrer"><i class="icon-facebook"></i></a></li>
+                <li><a href="" target="_blank" rel="noopener noreferrer"><i class="icon-instagram"></i></a></li>
+                <li><a href="" target="_blank" rel="noopener noreferrer"><i class="icon-youtube-play"></i></a></li>
+              </ul>
+            </nav>
+          </aside>
+          <nav class="Header__navMain mt-2 hide" id="js-main-menu-scroll">
+            <ul class="Header__listMain">
+              <li><a href="colegio.html">El colegio</a></li>
+              <li><a href="propuesta.html">Propuesta formativa</a></li>
+              <li><a href="">Pastoral</a></li>
+              <li class="active"><a href="">Servicios</a></li>
+              <li><a href="">Vida escolar</a></li>
+              <li><a href="ubicanos.html">Ubícanos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <nav class="Header__navMain mt-3" id="js-main-menu">
+        <ul class="Header__listMain">
+          <li><a href="colegio.html">El colegio</a></li>
+          <li><a href="propuesta.html">Propuesta formativa</a></li>
+          <li><a href="">Pastoral</a></li>
+          <li class="active"><a href="">Servicios</a></li>
+          <li><a href="">Vida escolar</a></li>
+          <li><a href="ubicanos.html">Ubícanos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="Front">
+    <div id="carouselFront" class="carousel slide Carousel Carousel--front" data-ride="carousel">
+      <div class="carousel-inner Carousel__inner">
+        <div class="carousel-item active Carousel__item">
+          <img class="d-block img-fluid" src="images/portada-servicios.jpg" alt="Portada Servicios" />
+          <div class="carousel-caption Carousel__caption Carousel__caption--left Carousel__caption--bottom">
+            <header class="Carousel__caption__header">
+              <h3 class="Carousel__caption__subtitle text-uppercase">Primero la</h3>
+              <h2 class="Carousel__caption__title text-uppercase">Excelencia</h2>
+            </header>
+            <p class="Carousel__caption__text">Enfocados en nuestras alumnas.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="Front__message">
+      <p class="text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+    </aside>
+  </section>
+
+  <section class="Page Page--padding">
+    <div class="container">
+      <h2 class="h4 Page__title text-uppercase text-center"><span>Servicios</span></h2>
+      <h3 class="Page__subtitle text-uppercase text-center mb-5">Ofrecemos a <span>las alumnas</span></h3>
+
+      <article class="Tabs">
+        <ul class="nav Tabs__list" id="tabsServices" role="tablist">
+          <li class="nav-item Tabs__list__item">
+            <a class="nav-link Tabs__list__link active" id="academicos-tab" data-toggle="tab" href="#academicos" role="tab" aria-controls="academicos" aria-selected="true">Académicos</a>
+          </li>
+          <li class="nav-item Tabs__list__item">
+            <a class="nav-link Tabs__list__link" id="a-las-alumnas-tab" data-toggle="tab" href="#a-las-alumnas" role="tab" aria-controls="a-las-alumnas" aria-selected="false">A las alumnas</a>
+          </li>
+          <li class="nav-item Tabs__list__item">
+            <a class="nav-link Tabs__list__link" id="extracurriculares-tab" data-toggle="tab" href="#extracurriculares" role="tab" aria-controls="extracurriculares" aria-selected="false">Extracurriculares</a>
+          </li>
+        </ul>
+        <div class="tab-content Tabs__content" id="myTabContent">
+          <div class="Tabs__pane tab-pane fade show active" id="academicos" role="tabpanel" aria-labelledby="academicos-tab">
+            <div class="accordion" id="accordionAcademicos">
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeAnimacionALaLectura">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link d-block" type="button" data-toggle="collapse" data-target="#collapse-programa-de-animacion-a-la-lectura" aria-expanded="true" aria-controls="collapse-programa-de-animacion-a-la-lectura">
+                      Programa de animación a la lectura
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapse-programa-de-animacion-a-la-lectura" class="collapse show" aria-labelledby="headingProgramaDeAnimacionALaLectura" data-parent="#accordionAcademicos">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeDesarrolloDeHabilidadesInformacioneles">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaDeDesarrolloDeHabilidadesInformacioneles" aria-expanded="false" aria-controls="collapseProgramaDeDesarrolloDeHabilidadesInformacioneles">
+                      Programa de desarrollo de habilidades informacionales
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaDeDesarrolloDeHabilidadesInformacioneles" class="collapse" aria-labelledby="headingProgramaDeDesarrolloDeHabilidadesInformacioneles" data-parent="#accordionAcademicos">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaRosettaStone">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaRosettaStone" aria-expanded="false" aria-controls="collapseProgramaRosettaStone">
+                      Programa Rosetta Stone
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaRosettaStone" class="collapse" aria-labelledby="headingProgramaRosettaStone" data-parent="#accordionAcademicos">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaFlexibleGrouping">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaFlexibleGrouping" aria-expanded="false" aria-controls="collapseProgramaFlexibleGrouping">
+                      Programa "Flexible Grouping"
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaFlexibleGrouping" class="collapse" aria-labelledby="headingProgramaFlexibleGrouping" data-parent="#accordionAcademicos">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeHabilidadesSensorioMotrices">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaDeHabilidadesSensorioMotrices" aria-expanded="false" aria-controls="collapseProgramaDeHabilidadesSensorioMotrices">
+                      Programa de Habilidades Sensorio Motrices
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaDeHabilidadesSensorioMotrices" class="collapse" aria-labelledby="headingProgramaDeHabilidadesSensorioMotrices" data-parent="#accordionAcademicos">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeNivelacion">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaDeNivelacion" aria-expanded="false" aria-controls="collapseProgramaDeNivelacion">
+                      Programa de Nivelación
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaDeNivelacion" class="collapse" aria-labelledby="headingProgramaDeNivelacion" data-parent="#accordionAcademicos">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Tabs__pane tab-pane fade" id="a-las-alumnas" role="tabpanel" aria-labelledby="a-las-alumnas-tab">
+            <div class="accordion" id="accordionALasAlumnas">
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeAnimacionALaLectura2">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-programa-de-animacion-a-la-lectura2" aria-expanded="true" aria-controls="collapse-programa-de-animacion-a-la-lectura2">
+                      Programa de animación a la lectura 2
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapse-programa-de-animacion-a-la-lectura2" class="collapse show" aria-labelledby="headingProgramaDeAnimacionALaLectura2" data-parent="#accordionALasAlumnas">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeDesarrolloDeHabilidadesInformacioneles2">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaDeDesarrolloDeHabilidadesInformacioneles2" aria-expanded="false" aria-controls="collapseProgramaDeDesarrolloDeHabilidadesInformacioneles2">
+                      Programa de desarrollo de habilidades informacionales 2
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaDeDesarrolloDeHabilidadesInformacioneles2" class="collapse" aria-labelledby="headingProgramaDeDesarrolloDeHabilidadesInformacioneles2" data-parent="#accordionALasAlumnas">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaRosettaStone2">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaRosettaStone2" aria-expanded="false" aria-controls="collapseProgramaRosettaStone2">
+                      Programa Rosetta Stone
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaRosettaStone2" class="collapse" aria-labelledby="headingProgramaRosettaStone2" data-parent="#accordionALasAlumnas">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaFlexibleGrouping2">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaFlexibleGrouping2" aria-expanded="false" aria-controls="collapseProgramaFlexibleGrouping2">
+                      Programa "Flexible Grouping" 2
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaFlexibleGrouping2" class="collapse" aria-labelledby="headingProgramaFlexibleGrouping2" data-parent="#accordionALasAlumnas">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeHabilidadesSensorioMotrices2">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaDeHabilidadesSensorioMotrices2" aria-expanded="false" aria-controls="collapseProgramaDeHabilidadesSensorioMotrices2">
+                      Programa de Habilidades Sensorio Motrices 2
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaDeHabilidadesSensorioMotrices2" class="collapse" aria-labelledby="headingProgramaDeHabilidadesSensorioMotrices2" data-parent="#accordionALasAlumnas">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeNivelacion2">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaDeNivelacion2" aria-expanded="false" aria-controls="collapseProgramaDeNivelacion2">
+                      Programa de Nivelación 2
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaDeNivelacion2" class="collapse" aria-labelledby="headingProgramaDeNivelacion2" data-parent="#accordionALasAlumnas">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Tabs__pane tab-pane fade" id="extracurriculares" role="tabpanel" aria-labelledby="extracurriculares-tab">
+            <div class="accordion" id="accordionExtracurriculares">
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeAnimacionALaLectura3">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-programa-de-animacion-a-la-lectura3" aria-expanded="true" aria-controls="collapse-programa-de-animacion-a-la-lectura3">
+                      Programa de animación a la lectura 3
+                    </button>
+                  </h5>
+                </div>
+
+                <div id="collapse-programa-de-animacion-a-la-lectura3" class="collapse show" aria-labelledby="headingProgramaDeAnimacionALaLectura3" data-parent="#accordionExtracurriculares">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeDesarrolloDeHabilidadesInformacioneles3">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaDeDesarrolloDeHabilidadesInformacioneles3" aria-expanded="false" aria-controls="collapseProgramaDeDesarrolloDeHabilidadesInformacioneles3">
+                      Programa de desarrollo de habilidades informacionales 3
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaDeDesarrolloDeHabilidadesInformacioneles3" class="collapse" aria-labelledby="headingProgramaDeDesarrolloDeHabilidadesInformacioneles3" data-parent="#accordionExtracurriculares">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaRosettaStone3">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaRosettaStone3" aria-expanded="false" aria-controls="collapseProgramaRosettaStone3">
+                      Programa Rosetta Stone 3
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaRosettaStone3" class="collapse" aria-labelledby="headingProgramaRosettaStone3" data-parent="#accordionExtracurriculares">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaFlexibleGrouping3">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaFlexibleGrouping3" aria-expanded="false" aria-controls="collapseProgramaFlexibleGrouping3">
+                      Programa "Flexible Grouping" 3
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaFlexibleGrouping3" class="collapse" aria-labelledby="headingProgramaFlexibleGrouping3" data-parent="#accordionExtracurriculares">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeHabilidadesSensorioMotrices3">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaDeHabilidadesSensorioMotrices3" aria-expanded="false" aria-controls="collapseProgramaDeHabilidadesSensorioMotrices3">
+                      Programa de Habilidades Sensorio Motrices 3
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaDeHabilidadesSensorioMotrices3" class="collapse" aria-labelledby="headingProgramaDeHabilidadesSensorioMotrices3" data-parent="#accordionExtracurriculares">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card Card">
+                <div class="card-header" id="headingProgramaDeNivelacion3">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseProgramaDeNivelacion3" aria-expanded="false" aria-controls="collapseProgramaDeNivelacion3">
+                      Programa de Nivelación 3
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseProgramaDeNivelacion3" class="collapse" aria-labelledby="headingProgramaDeNivelacion3" data-parent="#accordionExtracurriculares">
+                  <div class="card-body">
+                    <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
+                    <p class="text-center">
+                      <img src="images/servicios-image-01.jpg" alt="" />
+                      <img src="images/servicios-image-02.jpg" alt="" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="Footer">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-3">
+          <nav class="Footer__nav">
+            <ul class="Footer__list text-uppercase">
+              <li><a href="#">Apafa</a></li>
+              <li><a href="#">Biblioteca</a></li>
+              <li><a href="#">Congregación IHM</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="col-6">
+          <h1 class="Footer__logo text-center">
+            <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
+              <img class="img-fluid" src="images/logo.png" alt="Colegio Villa María - Miraflores" />
+            </a>
+          </h1>
+        </div>
+        <div class="col-3">
+          <nav class="Footer__nav">
+            <ul class="Footer__list">
+              <li><i class="icon-phone"></i> 445-0547 / 445-3592</li>
+              <li><i class="icon-mail"></i> villamaria@vmm.edu.pe</li>
+              <li><i class="icon-map-pin"></i> Calle Contralmirante Montero 225- Miraflores</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="ArrowTop"><i class="icon-keyboard_arrow_up"></i></button>
+
+  <script type="text/javascript" src="js/min/bundle.js"></script>
+  <script type="text/javascript" src="js/min/script.js"></script>
+</body>
+</html>

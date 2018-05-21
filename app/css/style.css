@@ -9948,8 +9948,8 @@ ul.bxslider {
 
 @font-face {
   font-family: 'icomoon';
-  src: url("./../fonts/icomoon.eot?tzb7kk");
-  src: url("./../fonts/icomoon.eot?tzb7kk#iefix") format("embedded-opentype"), url("./../fonts/icomoon.ttf?tzb7kk") format("truetype"), url("./../fonts/icomoon.woff?tzb7kk") format("woff"), url("./../fonts/icomoon.svg?tzb7kk#icomoon") format("svg");
+  src: url("./../fonts/icomoon.eot?9kt3ap");
+  src: url("./../fonts/icomoon.eot?9kt3ap#iefix") format("embedded-opentype"), url("./../fonts/icomoon.ttf?9kt3ap") format("truetype"), url("./../fonts/icomoon.woff?9kt3ap") format("woff"), url("./../fonts/icomoon.svg?9kt3ap#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -9966,6 +9966,12 @@ ul.bxslider {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-minus:before {
+  content: "\e919"; }
+
+.icon-plus:before {
+  content: "\e918"; }
+
 .icon-rotate:before {
   content: "\e917"; }
 
@@ -9974,24 +9980,6 @@ ul.bxslider {
 
 .icon-mail-envelope-open:before {
   content: "\e900"; }
-
-.icon-instagram:before {
-  content: "\e913"; }
-
-.icon-whatsapp:before {
-  content: "\e90f"; }
-
-.icon-twitter:before {
-  content: "\e910"; }
-
-.icon-facebook:before {
-  content: "\e911"; }
-
-.icon-facebook-f:before {
-  content: "\e911"; }
-
-.icon-youtube-play:before {
-  content: "\e912"; }
 
 .icon-play_arrow:before {
   content: "\e90a"; }
@@ -10040,6 +10028,24 @@ ul.bxslider {
 
 .icon-arrow-up:before {
   content: "\e909"; }
+
+.icon-instagram:before {
+  content: "\e913"; }
+
+.icon-whatsapp:before {
+  content: "\e90f"; }
+
+.icon-twitter:before {
+  content: "\e910"; }
+
+.icon-facebook:before {
+  content: "\e911"; }
+
+.icon-facebook-f:before {
+  content: "\e911"; }
+
+.icon-youtube-play:before {
+  content: "\e912"; }
 
 body {
   background-color: #ffffff;
@@ -10692,6 +10698,14 @@ li {
   -ms-flex-order: 2;
   order: 2; }
 
+.Title {
+  color: #1f376c;
+  font-size: 1.375rem;
+  font-weight: 700; }
+
+.Box--padding {
+  padding: 0 2rem; }
+
 .Box--white .Box__title {
   color: white; }
 
@@ -10737,6 +10751,54 @@ li {
 
 .Card__date {
   color: #939292; }
+
+.Card {
+  border: none;
+  border-radius: 0; }
+  .Card:first-child .card-header {
+    border-top: 1px solid #939292; }
+  .Card .card-header {
+    background-color: white;
+    border-bottom-color: #939292; }
+    .Card .card-header:first-child {
+      border-radius: 0; }
+    .Card .card-header .btn-link {
+      color: #252525;
+      font-size: 1.375rem;
+      position: relative;
+      text-align: left;
+      width: 100%;
+      z-index: 9; }
+      .Card .card-header .btn-link:focus, .Card .card-header .btn-link:hover {
+        color: #e14e3f;
+        text-decoration: none; }
+      .Card .card-header .btn-link[aria-expanded="true"] {
+        color: #e14e3f;
+        font-weight: 700; }
+        .Card .card-header .btn-link[aria-expanded="true"]::after {
+          content: "\e919"; }
+      .Card .card-header .btn-link::after {
+        content: "\e918";
+        cursor: pointer;
+        font-family: 'icomoon' !important;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 2rem;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        z-index: 1; }
+    .Card .card-header h5 {
+      position: relative; }
+  .Card .collapse.show {
+    border-bottom: 1px solid #939292; }
 
 .Breadcrumb {
   background-color: transparent;
@@ -10784,6 +10846,10 @@ li {
       width: 100%; }
   .Accordion--landscape .Accordion__nav {
     width: 20%; }
+    .Accordion--landscape .Accordion__nav--30 {
+      width: 30%; }
+      .Accordion--landscape .Accordion__nav--30 + .Accordion__content {
+        width: 70%; }
   .Accordion--landscape .Accordion__list {
     border-right: 2px solid rgba(58, 58, 58, 0.45); }
     .Accordion--landscape .Accordion__list li {
@@ -10876,7 +10942,9 @@ li {
           border-bottom-color: #e14e3f; }
 
 .Tabs__list__item {
-  margin-right: 2rem; }
+  margin-right: 2rem;
+  max-width: 15rem;
+  text-align: center; }
   .Tabs__list__item:last-child {
     margin-right: 0; }
 
