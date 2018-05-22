@@ -1,0 +1,29 @@
+.Nav {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.Nav__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  padding-left: 0;
+  li {
+    font-size: 1.375rem;
+    list-style: none;
+    margin-right: 1.5rem;
+    text-transform: uppercase;
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: rgba($accentColor, .45);
+      font-weight: 400;
+    }
+    &.active, &:focus, &:hover {
+      a {
+        color: $thirdColor;
+      }
+    }
+  }
+}
