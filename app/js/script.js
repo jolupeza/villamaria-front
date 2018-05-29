@@ -32,13 +32,13 @@ function verifyMedia () {
         var $this = $(this),
             animation = $this.data('animation'),
             parent = $this.parent();
-          parent.addClass('animated ' + animation);
+         parent.addClass('animated ' + animation);
       },
       function () {
         var $this = $(this),
             animation = $this.data('animation'),
             parent = $this.parent();
-          parent.removeClass('animated ' + animation);
+         parent.removeClass('animated ' + animation);
       }
     );
     */
@@ -57,6 +57,48 @@ function verifyMedia () {
       arrow.fadeOut();
     }
   };
+})(jQuery);
+'use strict';
+
+function initMap() {
+  if (!infoMaps.length) {
+    return false;
+  }
+
+  var mapCoord = { lat: infoMaps[0].lat, lng: infoMaps[0].long },
+      options = {
+    zoom: 16,
+    center: mapCoord,
+    scrollwheel: false
+  };
+
+  infoMaps[0].map = new google.maps.Map(document.getElementById(infoMaps[0].id), options);
+
+  infoMaps[0].marker = new google.maps.Marker({
+    position: mapCoord,
+    map: infoMaps[0].map,
+    title: 'Colegio Villa María - Miraflores'
+  });
+
+  infoMaps[0].load = true;
+}
+
+;(function ($) {
+  var $window = $(window);
+
+  $(function () {
+    $window.on('resize', function () {
+      if (infoMaps.length) {
+
+        infoMaps.forEach(function (info) {
+          if (!$.isEmptyObject(info.map)) {
+            google.maps.event.trigger(info.map, "resize");
+            info.map.setCenter({ lat: info.lat, lng: info.long });
+          }
+        });
+      }
+    });
+  });
 })(jQuery);
 "use strict";
 

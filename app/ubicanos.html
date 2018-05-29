@@ -6,6 +6,9 @@
   <title>Colegio Villa María - Miraflores</title>
 
   <link rel="stylesheet" href="css/style.css" />
+  <script>
+    var infoMaps = [];
+  </script>
 </head>
 <body>
   <header class="Header">
@@ -148,9 +151,18 @@
           </form>
         </div>
         <div class="col-6">
-          <figure class="Contact__map">
-            <img src="images/map.jpg" alt="Mapa" class="img-fluid d-block m-auto">
-          </figure>
+          <figure class="Contact__map" id="1-map" data-lat="-12.110819" data-long="-77.028549"></figure>
+          <script>
+            infoMaps.push({
+              id: '1-map',
+              lat: -12.110819,
+              long: -77.028549,
+              map: {},
+              marker: {},
+              infowindow: {},
+              load: false,
+            });
+          </script>
         </div>
       </div>
     </div>
@@ -192,5 +204,7 @@
 
   <script type="text/javascript" src="js/min/bundle.js"></script>
   <script type="text/javascript" src="js/min/script.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-1Na_uIi3tmxgSORrcCiMm73lCZ1_31Y&callback=initMap" async defer></script>
 </body>
 </html>

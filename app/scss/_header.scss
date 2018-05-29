@@ -67,7 +67,7 @@
             }
           }
         }
-        &.active {
+        &.active, &.current-menu-item {
           a {
             color: $thirdColor;
             &::before {
@@ -241,7 +241,7 @@
         }
       }
     }
-    &.active {
+    &.active, &.current-menu-item {
       a {
         &::before {
           opacity: 1;
