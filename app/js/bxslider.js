@@ -1,15 +1,17 @@
 "use strict";
 
 ;(function ($) {
-  let bxTestimonials;
+  let bxTestimonials, bxAchievements, bxInicial, bxPrimaria;
 
   $(function () {
-    initBxSlider($('.testimonials-slider'), 2);
+    initBxSlider($('.testimonials-slider'), 2, bxTestimonials);
 
-    initBxSlider($('.logros-slider'), 4);
+    initBxSlider($('.logros-slider'), 4, bxAchievements);
+
+    initBxSlider($('.propuesta-slider'), 3, bxInicial);
   });
 
-  function initBxSlider(bxSlider, bxSlides) {
+  let initBxSlider = (bxSlider, bxSlides, wrapper) => {
     let numSlides = bxSlider.find('.Sliders__item').length;
 
     if (numSlides < bxSlides + 1) {
@@ -20,7 +22,7 @@
         slides = window.matchMedia("(max-width: 767px)").matches ? 1 : bxSlides,
         marginSlide = window.matchMedia("(max-width: 767px)").matches ? 0 : 15
 
-    bxTestimonials = bxSlider.bxSlider({
+    wrapper = bxSlider.bxSlider({
       auto: true,
       autoHover: true,
       pager: false,

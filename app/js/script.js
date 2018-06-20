@@ -103,11 +103,17 @@ function initMap() {
 "use strict";
 
 ;(function ($) {
-  var $window = $(window);
+  var $window = $(window),
+      $body = $('body'),
+      $header = $('.Header');
 
   $(function () {
     $window.on('scroll', function () {
-      checkScrollHeader();
+      if ($body.hasClass('category') || $body.hasClass('single')) {
+        return false;
+      } else {
+        headerScroll();
+      }
     });
 
     checkScrollHeader();
@@ -128,28 +134,51 @@ function initMap() {
     });
   });
 
-  function checkScrollHeader() {
-    var minScroll = 50,
-        header = $('.Header'),
-        headerLogo = $('.Header__logo'),
+  var checkScrollHeader = function checkScrollHeader() {
+    if ($body.hasClass('category') || $body.hasClass('single')) {
+      activeHeaderScroll();return false;
+    }
+
+    headerScroll();
+  };
+
+  var headerScroll = function headerScroll() {
+    var minScroll = 50;
+
+    if ($window.scrollTop() > minScroll) {
+      activeHeaderScroll();
+    } else {
+      removeHeaderScroll();
+    }
+  };
+
+  var activeHeaderScroll = function activeHeaderScroll() {
+    var headerLogo = $('.Header__logo'),
         logo = headerLogo.find('img'),
         logoImage = headerLogo.data('image'),
         logoImageHover = headerLogo.data('imagehover'),
         menu = $('#js-main-menu'),
         menuHover = $('#js-main-menu-scroll');
 
-    if ($window.scrollTop() > minScroll) {
-      header.addClass('Header--scroll');
-      logo.attr('src', logoImageHover);
-      menu.addClass('hide');
-      menuHover.removeClass('hide');
-    } else {
-      header.removeClass('Header--scroll');
-      logo.attr('src', logoImage);
-      menu.removeClass('hide');
-      menuHover.addClass('hide');
-    }
-  }
+    $header.addClass('Header--scroll');
+    logo.attr('src', logoImageHover);
+    menu.addClass('hide');
+    menuHover.removeClass('hide');
+  };
+
+  var removeHeaderScroll = function removeHeaderScroll() {
+    var headerLogo = $('.Header__logo'),
+        logo = headerLogo.find('img'),
+        logoImage = headerLogo.data('image'),
+        logoImageHover = headerLogo.data('imagehover'),
+        menu = $('#js-main-menu'),
+        menuHover = $('#js-main-menu-scroll');
+
+    $header.removeClass('Header--scroll');
+    logo.attr('src', logoImage);
+    menu.removeClass('hide');
+    menuHover.addClass('hide');
+  };
 })(jQuery);
 "use strict";
 
@@ -177,15 +206,20 @@ function initMap() {
 "use strict";
 
 ;(function ($) {
-  var bxTestimonials = void 0;
+  var bxTestimonials = void 0,
+      bxAchievements = void 0,
+      bxInicial = void 0,
+      bxPrimaria = void 0;
 
   $(function () {
-    initBxSlider($('.testimonials-slider'), 2);
+    initBxSlider($('.testimonials-slider'), 2, bxTestimonials);
 
-    initBxSlider($('.logros-slider'), 4);
+    initBxSlider($('.logros-slider'), 4, bxAchievements);
+
+    initBxSlider($('.propuesta-slider'), 3, bxInicial);
   });
 
-  function initBxSlider(bxSlider, bxSlides) {
+  var initBxSlider = function initBxSlider(bxSlider, bxSlides, wrapper) {
     var numSlides = bxSlider.find('.Sliders__item').length;
 
     if (numSlides < bxSlides + 1) {
@@ -196,7 +230,7 @@ function initMap() {
         slides = window.matchMedia("(max-width: 767px)").matches ? 1 : bxSlides,
         marginSlide = window.matchMedia("(max-width: 767px)").matches ? 0 : 15;
 
-    bxTestimonials = bxSlider.bxSlider({
+    wrapper = bxSlider.bxSlider({
       auto: true,
       autoHover: true,
       pager: false,
@@ -208,6 +242,6 @@ function initMap() {
       prevText: '<i class="icon-keyboard_arrow_left"></i>',
       nextText: '<i class="icon-keyboard_arrow_right"></i>'
     });
-  }
+  };
 })(jQuery);
 //# sourceMappingURL=script.js.map

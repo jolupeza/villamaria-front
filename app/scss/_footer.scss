@@ -19,5 +19,10 @@
         color: $thirdColor;
       }
     }
+    &.current-menu-item {
+      a {
+        color: $thirdColor;
+      }
+    }
   }
 }

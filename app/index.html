@@ -77,7 +77,7 @@
       <div class="carousel-inner Carousel__inner">
         <div class="carousel-item active Carousel__item">
           <img class="d-block w-100 img-fluid" src="images/portada.jpg" alt="Portada">
-          <div class="carousel-caption Carousel__caption">
+          <div class="carousel-caption Carousel__caption Carousel__caption--right">
             <header class="Carousel__caption__header">
               <h3 class="Carousel__caption__subtitle text-uppercase">Colegio</h3>
               <h2 class="Carousel__caption__title text-uppercase">Villa María</h2>
@@ -104,7 +104,7 @@
       <h3 class="Page__subtitle text-uppercase">Bienvenidos al <span>Colegio</span></h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure asperiores officia, voluptatibus maiores atque quasi qui dolores. Maxime quia possimus, facilis commodi, quo obcaecati nostrum, dolores a voluptatum, ducimus natus?</p>
       <p class="text-center">
-        <a href="colegio.html" class="Button Button--ghost Button--ghost--second">conocer el colegio <i class="icon-arrow-right"></i></a>
+        <a href="colegio.html" class="Button Button--sm Button--ghost Button--ghost--second">conocer el colegio <i class="icon-arrow-right"></i></a>
       </p>
     </article>
   </section>
@@ -117,102 +117,87 @@
           <h3 class="Page__subtitle Page__subtitle--white text-uppercase text-center">Pensamos en <span>el mañana</span></h3>
         </div>
       </div>
-      <div class="row align-items-center mt-5">
-        <div class="col-4">
-          <p class="text-center mb-5">
-            <button class="Button Button--large Button--ghost active text-uppercase Btn-collapse Btn-collapse-inicial" type="button" data-toggle="collapse" data-target="#propuesta-inicial" aria-expanded="true" aria-controls="propuesta-inicial">Inicial</button>
-          </p>
+
+      <header class="d-flex justify-content-around text-center mb-5">
+        <button class="Button Button--rounded Button--ghost active text-uppercase Btn-collapse Btn-collapse-inicial" type="button" data-toggle="collapse" data-target="#propuesta-inicial" aria-expanded="true" aria-controls="propuesta-inicial">Inicial</button>
+        <button class="Button Button--rounded Button--ghost text-uppercase Btn-collapse Btn-collapse-primaria" type="button" data-toggle="collapse" data-target="#propuesta-primaria" aria-expanded="false" aria-controls="propuesta-primaria">Primaria</button>
+      </header>
+      <div class="collapse multi-collapse show" id="propuesta-inicial" data-parent="#accordion-propuesta">
+        <article class="text-white">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse magni excepturi enim reiciendis quas alias, libero aliquid, tenetur vero numquam recusandae cupiditate animi voluptas qui, facilis provident consectetur velit! Inicial</p>
+
+          <div class="Sliders mt-5 mb-5">
+            <section class="Box Box--white Sliders__wrapper d-flex propuesta-slider">
+              <article class="Box__item Sliders__item">
+                <figure class="Box__figure text-center">
+                  <i class="icon-world"></i>
+                </figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Inglés</h4>
+                </div>
+              </article>
+              <article class="Box__item Sliders__item">
+                <figure class="Box__figure text-center">
+                  <i class="icon-world"></i>
+                </figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Formación religiosa</h4>
+                </div>
+              </article>
+              <article class="Box__item Sliders__item">
+                <figure class="Box__figure text-center">
+                  <i class="icon-world"></i>
+                </figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Ciencia y Tecnología</h4>
+                </div>
+              </article>
+            </section>
+          </div>
+
           <p class="text-center">
-            <button class="Button Button--large Button--ghost text-uppercase Btn-collapse Btn-collapse-primaria" type="button" data-toggle="collapse" data-target="#propuesta-primaria" aria-expanded="false" aria-controls="propuesta-primaria">Primaria</button>
+            <a href="propuesta-inicial.html" class="Button Button--sm Button--ghost">ver toda la propuesta <i class="icon-arrow-right"></i></a>
           </p>
-        </div>
-        <div class="col-8">
-          <div class="collapse multi-collapse show" id="propuesta-inicial" data-parent="#accordion-propuesta">
-            <article class="text-white">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse magni excepturi enim reiciendis quas alias, libero aliquid, tenetur vero numquam recusandae cupiditate animi voluptas qui, facilis provident consectetur velit! Inicial</p>
+        </article>
+      </div>
 
-              <section class="Box Box--white row mt-5 mb-5">
-                <div class="col-4">
-                  <article class="Box__item">
-                    <figure class="Box__figure text-center">
-                      <i class="icon-world"></i>
-                    </figure>
-                    <div class="Box__content text-center">
-                      <h4 class="Box__title text-uppercase">Inglés</h4>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-4">
-                  <article class="Box__item">
-                    <figure class="Box__figure text-center">
-                      <i class="icon-world"></i>
-                    </figure>
-                    <div class="Box__content text-center">
-                      <h4 class="Box__title text-uppercase">Formación religiosa</h4>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-4">
-                  <article class="Box__item">
-                    <figure class="Box__figure text-center">
-                      <i class="icon-world"></i>
-                    </figure>
-                    <div class="Box__content text-center">
-                      <h4 class="Box__title text-uppercase">Ciencia y Tecnología</h4>
-                    </div>
-                  </article>
-                </div>
-              </section>
+      <div class="collapse multi-collapse" id="propuesta-primaria" data-parent="#accordion-propuesta">
+        <article class="text-white">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse magni excepturi enim reiciendis quas alias, libero aliquid, tenetur vero numquam recusandae cupiditate animi voluptas qui, facilis provident consectetur velit! Primaria</p>
 
-              <p class="text-center">
-                <a href="propuesta-inicial.html" class="Button Button--ghost">ver toda la propuesta <i class="icon-arrow-right"></i></a>
-              </p>
-            </article>
+          <div class="Sliders mt-5 mb-5">
+            <section class="Box Box--white Sliders__wrapper d-flex propuesta-slider">
+              <article class="Box__item Sliders__item">
+                <figure class="Box__figure text-center">
+                  <i class="icon-world"></i>
+                </figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Inglés</h4>
+                </div>
+              </article>
+              <article class="Box__item Sliders__item">
+                <figure class="Box__figure text-center">
+                  <i class="icon-world"></i>
+                </figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Formación religiosa</h4>
+                </div>
+              </article>
+              <article class="Box__item Sliders__item">
+                <figure class="Box__figure text-center">
+                  <i class="icon-world"></i>
+                </figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Ciencia y tecnología</h4>
+                </div>
+              </article>
+            </section>
           </div>
 
-          <div class="collapse multi-collapse" id="propuesta-primaria" data-parent="#accordion-propuesta">
-            <article class="text-white">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse magni excepturi enim reiciendis quas alias, libero aliquid, tenetur vero numquam recusandae cupiditate animi voluptas qui, facilis provident consectetur velit! Primaria</p>
-
-              <section class="Box Box--white row mt-5 mb-5">
-                <div class="col-4">
-                  <article class="Box__item">
-                    <figure class="Box__figure text-center">
-                      <i class="icon-world"></i>
-                    </figure>
-                    <div class="Box__content text-center">
-                      <h4 class="Box__title text-uppercase">Inglés</h4>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-4">
-                  <article class="Box__item">
-                    <figure class="Box__figure text-center">
-                      <i class="icon-world"></i>
-                    </figure>
-                    <div class="Box__content text-center">
-                      <h4 class="Box__title text-uppercase">Formación religiosa</h4>
-                    </div>
-                  </article>
-                </div>
-                <div class="col-4">
-                  <article class="Box__item">
-                    <figure class="Box__figure text-center">
-                      <i class="icon-world"></i>
-                    </figure>
-                    <div class="Box__content text-center">
-                      <h4 class="Box__title text-uppercase">Ciencia y tecnología</h4>
-                    </div>
-                  </article>
-                </div>
-              </section>
-
-              <p class="text-center">
-                <a href="propuesta-primaria.html" class="Button Button--ghost">ver toda la propuesta <i class="icon-arrow-right"></i></a>
-              </p>
-            </article>
-          </div>
-        </div>
+          <p class="text-center">
+            <a href="propuesta-primaria.html" class="Button Button--sm Button--ghost">ver toda la propuesta <i class="icon-arrow-right"></i></a>
+          </p>
+        </article>
       </div>
     </div>
   </section>
@@ -225,7 +210,7 @@
           <h3 class="Page__subtitle text-uppercase">Ofrecemos al <span>estudiante</span></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat temporibus, maiores dolore distinctio voluptatem iure quae non deleniti soluta, in dignissimos sapiente voluptates facere earum. Nostrum ex, quae alias soluta!</p>
           <p class="text-center">
-            <a href="servicios.html" class="Button Button--ghost Button--ghost--second">ver todos los servicios <i class="icon-arrow-right"></i></a>
+            <a href="servicios.html" class="Button Button--sm Button--ghost Button--ghost--second">ver todos los servicios <i class="icon-arrow-right"></i></a>
           </p>
         </div>
         <div class="col-8">
@@ -351,7 +336,7 @@
                 <h5 class="Card__date">20/02/2017</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur quia enim quaerat assumenda perspiciatis illo.</p>
                 <p class="text-center">
-                  <a href="single.html" class="Button Button--ghost Button--ghost--second">ver más <i class="icon-arrow-right"></i></a>
+                  <a href="single.html" class="Button Button--xs Button--ghost Button--ghost--second">ver más <i class="icon-arrow-right"></i></a>
                 </p>
               </div>
             </article>
@@ -368,7 +353,7 @@
                 <h5 class="Card__date">20/02/2017</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur quia enim quaerat assumenda perspiciatis illo.</p>
                 <p class="text-center">
-                  <a href="single.html" class="Button Button--ghost Button--ghost--second">ver más <i class="icon-arrow-right"></i></a>
+                  <a href="single.html" class="Button Button--xs Button--ghost Button--ghost--second">ver más <i class="icon-arrow-right"></i></a>
                 </p>
               </div>
             </article>
@@ -385,7 +370,7 @@
                 <h5 class="Card__date">20/02/2017</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequatur quia enim quaerat assumenda perspiciatis illo.</p>
                 <p class="text-center">
-                  <a href="single.html" class="Button Button--ghost Button--ghost--second">ver más <i class="icon-arrow-right"></i></a>
+                  <a href="single.html" class="Button Button--xs Button--ghost Button--ghost--second">ver más <i class="icon-arrow-right"></i></a>
                 </p>
               </div>
             </article>
@@ -393,7 +378,7 @@
         </div>
 
         <p class="mt-5 text-center">
-          <a href="vidaescolar.html" class="Button Button--ghost Button--ghost--third">ver toda la vida escolar <i class="icon-arrow-right"></i></a>
+          <a href="vidaescolar.html" class="Button Button--sm Button--ghost Button--ghost--third">ver toda la vida escolar <i class="icon-arrow-right"></i></a>
         </p>
       </section>
     </div>

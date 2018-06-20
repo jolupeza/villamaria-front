@@ -67,7 +67,7 @@
             }
           }
         }
-        &.active, &.current-menu-item {
+        &.active, &.current-menu-item, &.current-category-ancestor, &.current-post-ancestor, &.current-page-ancestor {
           a {
             color: $thirdColor;
             &::before {
@@ -241,7 +241,7 @@
         }
       }
     }
-    &.active, &.current-menu-item {
+    &.active, &.current-menu-item, &.current-category-ancestor, &.current-post-ancestor, &.current-page-ancestor {
       a {
         &::before {
           opacity: 1;

@@ -3,6 +3,7 @@ const gulp = require('gulp'),
       autoprefixer = require('gulp-autoprefixer'),
       sourcemaps = require('gulp-sourcemaps'),
       cssnano = require('gulp-cssnano'),
+      purify = require('gulp-purifycss'),
       argv = require('yargs').argv,
       gulpIf = require('gulp-if'),
       babel = require('gulp-babel'),
@@ -44,6 +45,16 @@ gulp.task('style', () => {
       .pipe(gulp.dest(config.cssDir))
       .pipe(sync.stream())
 });
+
+gulp.task('css', () => {
+  return gulp.src(config.cssDir + '/style.css')
+    .pipe(purify([
+        config.jsDir + '/**/*.js',
+        config.template + '/*.html'
+      ]))
+    .pipe(gulpIf(isProduction, cssnano()))
+    .pipe(gulp.dest(config.cssDir + '/min/'))
+})
 
 gulp.task('concat', () => {
   return gulp.src([

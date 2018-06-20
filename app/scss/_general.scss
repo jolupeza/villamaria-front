@@ -8,6 +8,11 @@ body {
       top: 32px;
     }
   }
+  &.category, &.single {
+    .Page--padding {
+      padding-top: 120px;
+    }
+  }
 }
 a {
   color: $secondColor;

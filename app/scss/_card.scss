@@ -25,6 +25,7 @@
     .btn-link {
       color: $textColor;
       font-size: 1.375rem;
+      padding-left: 2rem;
       position: relative;
       text-align: left;
       width: 100%;
@@ -37,11 +38,11 @@
         color: $thirdColor;
         font-weight: 700;
         &::after {
-          content: "\e919";
+          content: "\e90c";
         }
       }
       &::after {
-        content: "\e918";
+        content: "\e90e";
         cursor: pointer;
         font-family: 'icomoon' !important;
         speak: none;
@@ -56,7 +57,7 @@
         -moz-osx-font-smoothing: grayscale;
         font-size: 2rem;
         position: absolute;
-        right: 10px;
+        left: 0;
         top: 5px;
         z-index: 1;
       }

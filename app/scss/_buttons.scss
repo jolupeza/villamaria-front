@@ -71,6 +71,11 @@
     font-size: 1.125rem;
     padding: .3em 1em
   }
+  &--rounded {
+    border-radius: .8rem;
+    padding: .5rem 0;
+    width: 25%;
+  }
   &--large {
     border-radius: .8rem;
     width: 80%;

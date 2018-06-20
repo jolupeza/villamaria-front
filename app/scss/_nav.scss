@@ -20,7 +20,7 @@
       color: rgba($accentColor, .45);
       font-weight: 400;
     }
-    &.active, &:focus, &:hover {
+    &.active, &.current-menu-item, &:focus, &:hover {
       a {
         color: $thirdColor;
       }

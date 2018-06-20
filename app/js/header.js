@@ -1,11 +1,17 @@
 "use strict";
 
 ;(function ($) {
-  let $window = $(window);
+  let $window = $(window),
+      $body = $('body'),
+      $header = $('.Header');
 
   $(function () {
     $window.on('scroll', function () {
-      checkScrollHeader();
+      if ($body.hasClass('category') || $body.hasClass('single')) {
+        return false;
+      } else {
+        headerScroll();
+      }
     });
 
     checkScrollHeader();
@@ -26,26 +32,49 @@
     });
   });
 
-  function checkScrollHeader () {
-    let minScroll = 50,
-        header = $('.Header'),
-        headerLogo = $('.Header__logo'),
-        logo = headerLogo.find('img'),
-        logoImage = headerLogo.data('image'),
-        logoImageHover = headerLogo.data('imagehover'),
-        menu = $('#js-main-menu'),
-        menuHover = $('#js-main-menu-scroll');
+  let checkScrollHeader = () => {
+    if ($body.hasClass('category') || $body.hasClass('single')) {
+      activeHeaderScroll(); return false;
+    }
+
+    headerScroll();
+  }
+
+  let headerScroll = () => {
+    let minScroll = 50;
 
     if ($window.scrollTop() > minScroll) {
-      header.addClass('Header--scroll');
-      logo.attr('src', logoImageHover);
-      menu.addClass('hide');
-      menuHover.removeClass('hide');
+      activeHeaderScroll();
     } else {
-      header.removeClass('Header--scroll');
-      logo.attr('src', logoImage);
-      menu.removeClass('hide');
-      menuHover.addClass('hide');
+      removeHeaderScroll();
     }
+  }
+
+  let activeHeaderScroll = () => {
+    let headerLogo = $('.Header__logo'),
+      logo = headerLogo.find('img'),
+      logoImage = headerLogo.data('image'),
+      logoImageHover = headerLogo.data('imagehover'),
+      menu = $('#js-main-menu'),
+      menuHover = $('#js-main-menu-scroll');
+
+    $header.addClass('Header--scroll');
+    logo.attr('src', logoImageHover);
+    menu.addClass('hide');
+    menuHover.removeClass('hide');
+  }
+
+  let removeHeaderScroll = () => {
+    let headerLogo = $('.Header__logo'),
+      logo = headerLogo.find('img'),
+      logoImage = headerLogo.data('image'),
+      logoImageHover = headerLogo.data('imagehover'),
+      menu = $('#js-main-menu'),
+      menuHover = $('#js-main-menu-scroll');
+
+    $header.removeClass('Header--scroll');
+    logo.attr('src', logoImage);
+    menu.removeClass('hide');
+    menuHover.addClass('hide');
   }
 })(jQuery);
