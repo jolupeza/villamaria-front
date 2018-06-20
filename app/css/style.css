@@ -10942,11 +10942,13 @@ li {
 .Box__item {
   margin-bottom: 1rem; }
 
-.Box__figure [class^="icon-"] {
+.Box__figure [class^="icon-"], .Box__figure img {
   border: 2px solid rgba(147, 146, 146, 0.3);
   border-radius: 50%;
   color: #e14e3f;
-  display: inline-block;
+  display: inline-block; }
+
+.Box__figure [class^="icon-"] {
   font-size: 3rem;
   padding: 1rem; }
 
