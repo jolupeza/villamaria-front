@@ -7689,8 +7689,8 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg); }
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -7717,8 +7717,8 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
-    transform: skewX(0.39063deg) skewY(0.39063deg); }
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -10714,6 +10714,9 @@ li {
 
 .Carousel--info .Carousel__caption {
   padding: 0 8rem; }
+  @media screen and (max-width: 1199px) {
+    .Carousel--info .Carousel__caption {
+      padding: 0 1rem; } }
   @media screen and (max-width: 991px) {
     .Carousel--info .Carousel__caption {
       left: 0;
@@ -10929,13 +10932,6 @@ li {
   @media screen and (max-width: 767px) {
     .Page--bg {
       background-position: center 0; } }
-
-.Page--carousel {
-  height: 100vh;
-  overflow-y: hidden; }
-  @media screen and (max-width: 991px) {
-    .Page--carousel {
-      height: auto; } }
 
 .Page--white .Page__title, .Page--white .Page__subtitle, .Page--white p {
   color: white; }

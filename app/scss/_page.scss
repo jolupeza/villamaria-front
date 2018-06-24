@@ -24,11 +24,6 @@
     }
   }
   &--carousel {
-    height: 100vh;
-    overflow-y: hidden;
-    @media screen and (max-width: 991px) {
-      height: auto;
-    }
   }
   &--white {
     .Page__title, .Page__subtitle, p {
