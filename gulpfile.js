@@ -60,6 +60,8 @@ gulp.task('concat', () => {
   return gulp.src([
     //config.jsDir + '/start.js',
     config.jsDir + '/main.js',
+    config.jsDir + '/carousel.js',
+    config.jsDir + '/sidebar.js',
     config.jsDir + '/maps.js',
     config.jsDir + '/header.js',
     config.jsDir + '/collapse.js',
@@ -116,7 +118,7 @@ gulp.task('js-sync', ['compress'], () => {
 gulp.task('browsersync', ['compress', 'style'], () => {
   sync.init({
     proxy: "villamaria.front",
-    browser: "google-chrome"
+    browser: "firefox"
     //browser: ["chrome", "firefox", "google-chrome"]
   });
 

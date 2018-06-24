@@ -2,6 +2,12 @@
   background-color: rgba($firstColor, .77);
   height: 100vh;
   position: relative;
+  @media screen and (max-width: 991px) {
+    height: auto;
+  }
+  @media screen and (max-width: 767px) {
+    height: 100vh;
+  }
 }
 .Front__message {
   background-color: rgba($firstColor, .77);
@@ -11,4 +17,7 @@
   position: absolute;
   width: 100%;
   z-index: 9;
+  @media screen and (max-width: 991px) {
+    padding: .5rem;
+  }
 }

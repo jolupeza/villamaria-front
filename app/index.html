@@ -6,19 +6,25 @@
   <title>Colegio Villa María - Miraflores</title>
 
   <link rel="stylesheet" href="css/style.css" />
+  <script>
+    var infoMaps = [];
+  </script>
 </head>
 <body>
   <header class="Header">
     <div class="container">
+      <button class="d-lg-none Header__sidebar js-sidebar">
+        <i class="icon-bars"></i>
+      </button>
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col col-lg-3">
           <h1 class="Header__logo text-center mb-0" data-image="images/logo.png" data-imagehover="images/logo-hover.png">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-9">
           <aside class="Header__top">
             <nav class="Header__navTop">
               <ul class="Header__menuTop">
@@ -59,7 +65,7 @@
           </nav>
         </div>
       </div>
-      <nav class="Header__navMain mt-3" id="js-main-menu">
+      <nav class="d-none d-lg-block Header__navMain mt-3" id="js-main-menu">
         <ul class="Header__listMain">
           <li><a href="colegio.html">El colegio</a></li>
           <li><a href="propuesta.html">Propuesta formativa</a></li>
@@ -72,11 +78,34 @@
     </div>
   </header>
 
+  <aside class="Sidebar">
+    <button class="Sidebar__close js-sidebar"><i class="icon-close"></i></button>
+    <h1 class="Sidebar__logo text-right">
+      <a href="index.html" title="Colegio Villa María - Miraflores">
+        <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
+      </a>
+    </h1>
+    <nav class="Sidebar__nav">
+      <ul class="Sidebar__list">
+        <li class="current-menu-item"><a href="index.html">Inicio</a></li>
+        <li><a href="colegio.html">El colegio</a></li>
+        <li><a href="propuesta.html">Propuesta Educativa</a></li>
+        <li><a href="pastoral.html">Pastoral</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="vidaescolar.html">Vida Escolar</a></li>
+        <li><a href="ubicanos.html">Ubícanos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <section class="Front">
-    <div id="carouselFront" class="carousel slide Carousel Carousel--front" data-ride="carousel">
+    <div id="carouselFront" class="Carousel Carousel--front">
       <div class="carousel-inner Carousel__inner">
         <div class="carousel-item active Carousel__item">
-          <img class="d-block w-100 img-fluid" src="images/portada.jpg" alt="Portada">
+          <picture>
+            <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/portada-responsive.jpg" />
+            <img class="img-fluid" src="images/portada2.jpg" alt="Portada">
+          </picture>
           <div class="carousel-caption Carousel__caption Carousel__caption--right">
             <header class="Carousel__caption__header">
               <h3 class="Carousel__caption__subtitle text-uppercase">Colegio</h3>
@@ -91,7 +120,8 @@
       </div>
     </div>
     <aside class="Front__message">
-      <p class="text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="d-none d-lg-block text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="text-center mb-0 d-lg-none"><a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
     </aside>
   </section>
 
@@ -126,34 +156,42 @@
         <article class="text-white">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse magni excepturi enim reiciendis quas alias, libero aliquid, tenetur vero numquam recusandae cupiditate animi voluptas qui, facilis provident consectetur velit! Inicial</p>
 
-          <div class="Sliders mt-5 mb-5">
-            <section class="Box Box--white Sliders__wrapper d-flex propuesta-slider">
-              <article class="Box__item Sliders__item">
+          <section class="Sliders Box Box--white mb-5 mt-5" data-id="1">
+            <div class="inicial-slider Sliders__wrapper d-flex" data-total="4">
+              <article class="Sliders__item">
                 <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                  <img src="images/apple.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Inglés</h4>
                 </div>
               </article>
-              <article class="Box__item Sliders__item">
+              <article class="Sliders__item">
                 <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                  <img src="images/apple.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Formación religiosa</h4>
                 </div>
               </article>
-              <article class="Box__item Sliders__item">
+              <article class="Sliders__item">
                 <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                  <img src="images/apple.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Ciencia y Tecnología</h4>
                 </div>
               </article>
-            </section>
-          </div>
+              <article class="Sliders__item">
+                <figure class="Box__figure text-center">
+                  <img src="images/apple.png" alt="" class="img-fluid" />
+                </figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Ciencia y Tecnología</h4>
+                </div>
+              </article>
+            </div>
+          </section>
 
           <p class="text-center">
             <a href="propuesta-inicial.html" class="Button Button--sm Button--ghost">ver toda la propuesta <i class="icon-arrow-right"></i></a>
@@ -165,34 +203,42 @@
         <article class="text-white">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo esse magni excepturi enim reiciendis quas alias, libero aliquid, tenetur vero numquam recusandae cupiditate animi voluptas qui, facilis provident consectetur velit! Primaria</p>
 
-          <div class="Sliders mt-5 mb-5">
-            <section class="Box Box--white Sliders__wrapper d-flex propuesta-slider">
-              <article class="Box__item Sliders__item">
+          <section class="Sliders Box Box--white mb-5 mt-5" data-id="2">
+            <section class="primaria-slider Sliders__wrapper d-flex" data-total="4">
+              <article class="Sliders__item">
                 <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                  <img src="images/apple.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Inglés</h4>
                 </div>
               </article>
-              <article class="Box__item Sliders__item">
+              <article class="Sliders__item">
                 <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                  <img src="images/apple.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Formación religiosa</h4>
                 </div>
               </article>
-              <article class="Box__item Sliders__item">
+              <article class="Sliders__item">
                 <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                  <img src="images/apple.png" alt="" class="img-fluid" />
+                </figure>
+                <div class="Box__content text-center">
+                  <h4 class="Box__title text-uppercase">Ciencia y tecnología</h4>
+                </div>
+              </article>
+              <article class="Sliders__item">
+                <figure class="Box__figure text-center">
+                  <img src="images/apple.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Ciencia y tecnología</h4>
                 </div>
               </article>
             </section>
-          </div>
+          </section>
 
           <p class="text-center">
             <a href="propuesta-primaria.html" class="Button Button--sm Button--ghost">ver toda la propuesta <i class="icon-arrow-right"></i></a>
@@ -205,20 +251,20 @@
   <section class="Page Page--padding">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-4">
+        <div class="col-12 col-lg-4">
           <h2 class="h4 Page__title text-uppercase"><span>Servicios</span></h2>
           <h3 class="Page__subtitle text-uppercase">Ofrecemos al <span>estudiante</span></h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat temporibus, maiores dolore distinctio voluptatem iure quae non deleniti soluta, in dignissimos sapiente voluptates facere earum. Nostrum ex, quae alias soluta!</p>
-          <p class="text-center">
+          <p class="d-none d-lg-block text-center">
             <a href="servicios.html" class="Button Button--sm Button--ghost Button--ghost--second">ver todos los servicios <i class="icon-arrow-right"></i></a>
           </p>
         </div>
-        <div class="col-8">
+        <div class="col-12 col-lg-8">
           <section class="Box row">
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <article class="Box__item">
-                <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                <figure class="Box__figure Box__avatar text-center">
+                  <img src="images/quimica.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Espacios diversos</h4>
@@ -226,10 +272,10 @@
                 </div>
               </article>
             </div>
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <article class="Box__item">
-                <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                <figure class="Box__figure Box__avatar text-center">
+                  <img src="images/quimica.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Laboratorio</h4>
@@ -237,10 +283,10 @@
                 </div>
               </article>
             </div>
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <article class="Box__item">
-                <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                <figure class="Box__figure Box__avatar text-center">
+                  <img src="images/quimica.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Espacios diversos</h4>
@@ -248,10 +294,10 @@
                 </div>
               </article>
             </div>
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <article class="Box__item">
-                <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                <figure class="Box__figure Box__avatar text-center">
+                  <img src="images/quimica.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Clases dinámicas</h4>
@@ -259,10 +305,10 @@
                 </div>
               </article>
             </div>
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <article class="Box__item">
-                <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                <figure class="Box__figure Box__avatar text-center">
+                  <img src="images/quimica.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Laboratorio</h4>
@@ -270,10 +316,10 @@
                 </div>
               </article>
             </div>
-            <div class="col-4">
+            <div class="col-md-6 col-lg-4">
               <article class="Box__item">
-                <figure class="Box__figure text-center">
-                  <i class="icon-world"></i>
+                <figure class="Box__figure Box__avatar text-center">
+                  <img src="images/quimica.png" alt="" class="img-fluid" />
                 </figure>
                 <div class="Box__content text-center">
                   <h4 class="Box__title text-uppercase">Almuerzo</h4>
@@ -282,6 +328,10 @@
               </article>
             </div>
           </section>
+
+          <p class="d-lg-none text-center mt-5">
+            <a href="servicios.html" class="Button Button--sm Button--ghost Button--ghost--second">ver todos los servicios <i class="icon-arrow-right"></i></a>
+          </p>
         </div>
       </div>
     </div>
@@ -291,15 +341,21 @@
     <div id="carouselInfo" class="carousel slide Carousel Carousel--info" data-ride="carousel">
       <div class="carousel-inner Carousel__inner">
         <div class="carousel-item active Carousel__item">
-          <img class="d-block w-100 img-fluid" src="images/slider-01.jpg" alt="Slide 01" />
-          <div class="carousel-caption Carousel__caption text-right">
+          <picture>
+            <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/slider-responsive.jpg" />
+            <img class="img-fluid" src="images/slider-01.jpg" alt="Slide 01" />
+          </picture>
+          <div class="carousel-caption Carousel__caption Carousel__caption--right text-right">
             <h2 class="Carousel__caption__title text-uppercase">Lorem ipsum dolor</h2>
             <h3 class="Carousel__caption__subtitle text-uppercase">sit amet</h3>
           </div>
         </div>
         <div class="carousel-item Carousel__item">
-          <img class="d-block w-100 img-fluid" src="images/slider-01.jpg" alt="Slide 02" />
-          <div class="carousel-caption Carousel__caption text-right">
+          <picture>
+            <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/slider-responsive.jpg" />
+            <img class="img-fluid" src="images/slider-01.jpg" alt="Slide 01" />
+          </picture>
+          <div class="carousel-caption Carousel__caption Carousel__caption--right text-right">
             <h2 class="Carousel__caption__title text-uppercase">Consectetur adipisicing</h2>
             <h3 class="Carousel__caption__subtitle text-uppercase">sapiente, iusto</h3>
           </div>
@@ -322,12 +378,12 @@
           <h3 class="Page__subtitle text-uppercase text-center">Hoy en la <span>escuela</span></h3>
         </div>
       </div>
-      <section class="Cards mt-5">
+      <section class="Cards mt-4">
         <div class="row">
-          <div class="col-4">
+          <div class="col-12 col-sm-6 col-md-4">
             <article class="Card">
-              <figure class="Card__figure">
-                <img class="img-fluid d-block m-auto" src="images/post-thumb.jpg" alt="Post 01" />
+              <figure class="Card__figure text-center">
+                <img class="img-fluid rounded" src="images/post-thumb.jpg" alt="Post 01" />
               </figure>
               <div class="Card__content">
                 <h3 class="h4 Card__title">
@@ -341,10 +397,10 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-sm-6 col-md-4">
             <article class="Card">
-              <figure class="Card__figure">
-                <img class="img-fluid d-block m-auto" src="images/post-thumb.jpg" alt="Post 01" />
+              <figure class="Card__figure text-center">
+                <img class="img-fluid rounded" src="images/post-thumb.jpg" alt="Post 01" />
               </figure>
               <div class="Card__content">
                 <h3 class="h4 Card__title">
@@ -358,10 +414,10 @@
               </div>
             </article>
           </div>
-          <div class="col-4">
+          <div class="col-12 col-sm-6 col-md-4">
             <article class="Card">
-              <figure class="Card__figure">
-                <img class="img-fluid d-block m-auto" src="images/post-thumb.jpg" alt="Post 01" />
+              <figure class="Card__figure text-center">
+                <img class="img-fluid rounded" src="images/post-thumb.jpg" alt="Post 01" />
               </figure>
               <div class="Card__content">
                 <h3 class="h4 Card__title">
@@ -393,28 +449,24 @@
         </div>
       </div>
 
-      <section class="Box row mt-5">
-        <div class="col-4">
-          <article class="Box__item">
+      <section class="Sliders Sliders--firstColor mt-5">
+        <section class="aliados-slider Sliders__wrapper d-flex" data-total="3">
+          <article class="Sliders__item">
             <figure class="Box__figure">
               <img src="images/aliado01.jpg" alt="Aliado 01" class="img-fluid d-block m-auto">
             </figure>
           </article>
-        </div>
-        <div class="col-4">
-          <article class="Box__item">
+          <article class="Sliders__item">
             <figure class="Box__figure">
               <img src="images/aliado02.jpg" alt="Aliado 01" class="img-fluid d-block m-auto">
             </figure>
           </article>
-        </div>
-        <div class="col-4">
-          <article class="Box__item">
+          <article class="Sliders__item">
             <figure class="Box__figure">
               <img src="images/aliado03.jpg" alt="Aliado 01" class="img-fluid d-block m-auto">
             </figure>
           </article>
-        </div>
+        </section>
       </section>
     </div>
   </section>
@@ -422,7 +474,7 @@
   <footer class="Footer">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list text-uppercase">
               <li><a href="#">Apafa</a></li>
@@ -431,14 +483,14 @@
             </ul>
           </nav>
         </div>
-        <div class="col-6">
+        <div class="col col-lg-6">
           <h1 class="Footer__logo text-center">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list">
               <li><i class="icon-phone"></i> 445-0547 / 445-3592</li>
@@ -454,6 +506,6 @@
   <button class="ArrowTop"><i class="icon-keyboard_arrow_up"></i></button>
 
   <script type="text/javascript" src="js/min/bundle.js"></script>
-  <script type="text/javascript" src="js/min/script.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

@@ -1,38 +1,314 @@
 "use strict";
 
 ;(function ($) {
-  let bxTestimonials, bxAchievements, bxInicial, bxPrimaria;
+  let $window = $(window),
+      bxTestimonials = {
+        wrapper: $('.testimonials-slider'),
+        bx: null,
+        margin: 15,
+        media: {
+          xl: 2,
+          lg: 2,
+          md: 1,
+          xs: 1
+        }
+      },
+      bxAchievements = {
+        wrapper: $('.logros-slider'),
+        bx: null,
+        margin: 15,
+        media: {
+          xl: 4,
+          lg: 3,
+          md: 2,
+          xs: 1
+        }
+      },
+      bxPartners = {
+        wrapper: $('.aliados-slider'),
+        bx: null,
+        margin: 15,
+        media: {
+          xl: 3,
+          lg: 3,
+          md: 2,
+          xs: 1
+        }
+      },
+      bxInicial = {
+        wrapper: $('.inicial-slider'),
+        bx: null,
+        margin: 15,
+        media: {
+          xl: 3,
+          lg: 3,
+          md: 2,
+          xs: 1
+        }
+      },
+      bxPrimaria = {
+        wrapper: $('.primaria-slider'),
+        bx: null,
+        margin: 15,
+        media: {
+          xl: 3,
+          lg: 3,
+          md: 2,
+          xs: 1
+        }
+      };
 
   $(function () {
-    initBxSlider($('.testimonials-slider'), 2, bxTestimonials);
-
-    initBxSlider($('.logros-slider'), 4, bxAchievements);
-
-    initBxSlider($('.propuesta-slider'), 3, bxInicial);
-  });
-
-  let initBxSlider = (bxSlider, bxSlides, wrapper) => {
-    let numSlides = bxSlider.find('.Sliders__item').length;
-
-    if (numSlides < bxSlides + 1) {
-      return;
+    if (checkBxSlider(bxTestimonials)) {
+      bxTestimonials.bx = bxTestimonials.wrapper.bxSlider(
+        initBxSlider(bxTestimonials)
+      );
     }
 
-    let widthBxSlider = (bxSlider.width() / 2) - 15,
-        slides = window.matchMedia("(max-width: 767px)").matches ? 1 : bxSlides,
-        marginSlide = window.matchMedia("(max-width: 767px)").matches ? 0 : 15
+    if (checkBxSlider(bxAchievements)) {
+      bxAchievements.bx = bxAchievements.wrapper.bxSlider(
+        initBxSlider(bxAchievements)
+      );
+    }
 
-    wrapper = bxSlider.bxSlider({
+    if (checkBxSlider(bxPartners)) {
+      bxPartners.bx = bxPartners.wrapper.bxSlider(
+        initBxSlider(bxPartners)
+      );
+    }
+
+    if (checkBxSlider(bxInicial)) {
+      bxInicial.bx = bxInicial.wrapper.bxSlider(
+        initBxSlider(bxInicial)
+      );
+    }
+
+    if (checkBxSlider(bxPrimaria)) {
+      bxPrimaria.bx = bxPrimaria.wrapper.bxSlider(
+        initBxSlider(bxPrimaria)
+      );
+    }
+
+    $('#accordion-propuesta').on('shown.bs.collapse', () => {
+      if (bxInicial.bx === null) {
+        if (checkBxSlider(bxInicial)) {
+          bxInicial.bx = bxInicial.wrapper.bxSlider(
+            initBxSlider(bxInicial, true)
+          );
+        } else {
+          if (bxInicial.bx !== null) {
+            bxInicial.bx.destroySlider();
+            bxInicial.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxInicial)) {
+          bxInicial.bx.reloadSlider(initBxSlider(bxInicial, true));
+        } else {
+          bxInicial.bx.destroySlider();
+          bxInicial.bx = null;
+        }
+      }
+
+      if (bxPrimaria.bx === null) {
+        if (checkBxSlider(bxPrimaria)) {
+          bxPrimaria.bx = bxPrimaria.wrapper.bxSlider(
+            initBxSlider(bxPrimaria, true)
+          );
+        } else {
+          if (bxPrimaria.bx !== null) {
+            bxPrimaria.bx.destroySlider();
+            bxPrimaria.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxPrimaria)) {
+          bxPrimaria.bx.reloadSlider(initBxSlider(bxPrimaria, true));
+        } else {
+          bxPrimaria.bx.destroySlider();
+          bxPrimaria.bx = null;
+        }
+      }
+    })
+
+    $window.on('resize', () => {
+      if (bxTestimonials.bx === null) {
+        if (checkBxSlider(bxTestimonials)) {
+          bxTestimonials.bx = bxTestimonials.wrapper.bxSlider(
+            initBxSlider(bxTestimonials, true)
+          );
+        } else {
+          if (bxTestimonials.bx !== null) {
+            bxTestimonials.bx.destroySlider();
+            bxTestimonials.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxTestimonials)) {
+          bxTestimonials.bx.reloadSlider(initBxSlider(bxTestimonials, true));
+        } else {
+          bxTestimonials.bx.destroySlider();
+          bxTestimonials.bx = null;
+        }
+      }
+
+      if (bxAchievements.bx === null) {
+        if (checkBxSlider(bxAchievements)) {
+          bxAchievements.bx = bxAchievements.wrapper.bxSlider(
+            initBxSlider(bxAchievements, true)
+          );
+        } else {
+          if (bxAchievements.bx !== null) {
+            bxAchievements.bx.destroySlider();
+            bxAchievements.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxAchievements)) {
+          bxAchievements.bx.reloadSlider(initBxSlider(bxAchievements, true));
+        } else {
+          bxAchievements.bx.destroySlider();
+          bxAchievements.bx = null;
+        }
+      }
+
+      if (bxPartners.bx === null) {
+        if (checkBxSlider(bxPartners)) {
+          bxPartners.bx = bxPartners.wrapper.bxSlider(
+            initBxSlider(bxPartners, true)
+          );
+        } else {
+          if (bxPartners.bx !== null) {
+            bxPartners.bx.destroySlider();
+            bxPartners.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxPartners)) {
+          bxPartners.bx.reloadSlider(initBxSlider(bxPartners, true));
+        } else {
+          bxPartners.bx.destroySlider();
+          bxPartners.bx = null;
+        }
+      }
+
+      if (bxInicial.bx === null) {
+        if (checkBxSlider(bxInicial)) {
+          bxInicial.bx = bxInicial.wrapper.bxSlider(
+            initBxSlider(bxInicial, true)
+          );
+        } else {
+          if (bxInicial.bx !== null) {
+            bxInicial.bx.destroySlider();
+            bxInicial.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxInicial)) {
+          bxInicial.bx.reloadSlider(initBxSlider(bxInicial, true));
+        } else {
+          bxInicial.bx.destroySlider();
+          bxInicial.bx = null;
+        }
+      }
+
+      if (bxPrimaria.bx === null) {
+        if (checkBxSlider(bxPrimaria)) {
+          bxPrimaria.bx = bxPrimaria.wrapper.bxSlider(
+            initBxSlider(bxPrimaria, true)
+          );
+        } else {
+          if (bxPrimaria.bx !== null) {
+            bxPrimaria.bx.destroySlider();
+            bxPrimaria.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxPrimaria)) {
+          bxPrimaria.bx.reloadSlider(initBxSlider(bxPrimaria, true));
+        } else {
+          bxPrimaria.bx.destroySlider();
+          bxPrimaria.bx = null;
+        }
+      }
+    });
+  });
+
+  let checkBxSlider = (obj) => {
+    let numSlides = obj.wrapper.data('total');
+
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      return numSlides > obj.media.xs;
+    }
+
+    if (window.matchMedia("(max-width: 991px)").matches) {
+      return numSlides > obj.media.md;
+    }
+
+    if (window.matchMedia("(max-width: 1199px)").matches) {
+      return numSlides > obj.media.lg;
+    }
+
+    return numSlides > obj.media.xl;
+  }
+
+  let initBxSlider = (obj, reload = false) => {
+    let widthParent = obj.wrapper.parent().width();
+
+    let config = {
       auto: true,
       autoHover: true,
-      pager: false,
-      minSlides: slides,
-      maxSlides: slides,
+      pager: true,
+      minSlides: 1,
+      maxSlides: 1,
       moveSlides: 1,
-      slideMargin: marginSlide,
-      slideWidth: widthBxSlider,
+      slideMargin: 0,
+      slideWidth: 0,
+      controls: false,
       prevText: '<i class="icon-keyboard_arrow_left"></i>',
       nextText: '<i class="icon-keyboard_arrow_right"></i>',
-    });
+    };
+
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      return config;
+    }
+
+    if (window.matchMedia("(max-width: 991px)").matches) {
+      config.minSlides = obj.media.md;
+      config.maxSlides = obj.media.md;
+
+      if (obj.media.md > 1) {
+        config.slideMargin = obj.margin;
+        config.slideWidth = (widthParent / obj.media.md) - config.slideMargin;
+      }
+
+      return config;
+    }
+
+    if (window.matchMedia("(max-width: 1199px)").matches) {
+      config.minSlides = obj.media.lg;
+      config.maxSlides = obj.media.lg;
+
+      if (obj.media.lg > 1) {
+        config.slideMargin = obj.margin;
+        config.slideWidth = (widthParent / obj.media.md) - config.slideMargin;
+      }
+
+      return config;
+    }
+
+    widthParent = reload ? obj.wrapper.parent().width() : obj.wrapper.parent().width() - 96;
+
+    config.minSlides = obj.media.xl;
+    config.maxSlides = obj.media.xl;
+
+    if (obj.media.xl > 1) {
+      config.controls = true;
+      config.slideMargin = obj.margin;
+      config.pager = false;
+      config.slideWidth = (widthParent / obj.media.xl) - config.slideMargin;
+    }
+
+    return config;
   }
 })(jQuery);

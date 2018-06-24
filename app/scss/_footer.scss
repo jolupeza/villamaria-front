@@ -1,6 +1,9 @@
 .Footer {
   background-color: $firstColor;
   padding: 3rem 0;
+  @media screen and (max-width: 991px) {
+    padding: 1.5rem 0;
+  }
 }
 .Footer__nav {
 

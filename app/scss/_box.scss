@@ -7,7 +7,7 @@
       color: white;
     }
     .Box__figure {
-      [class^="icon-"] {
+      [class^="icon-"], img {
         border-color: white;
         color: white;
       }
@@ -18,6 +18,9 @@
     justify-content: space-between;
     .Box__item {
       width: 33%;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
     }
   }
 }
@@ -31,6 +34,9 @@
 }
 .Box__item {
   margin-bottom: 1rem;
+  @media screen and (max-width: 767px) {
+    display: flex;
+  }
 }
 .Box__figure {
   [class^="icon-"], img {
@@ -44,3 +50,20 @@
     padding: 1rem;
   }
 }
+.Box__content {
+  width: 100%;
+}
+.Box__avatar {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0;
+    padding: 0 .8rem;
+  }
+}
+/* .Box__avatar {
+  @media screen and (max-width: 767px) {
+    width: 50%;
+    + .Box__content {
+      width: 50%;
+    }
+  }
+} */

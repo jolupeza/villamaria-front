@@ -80,9 +80,17 @@
         }
       }
     }
+    .Header__sidebar {
+      color: $firstColor;
+    }
   }
 }
 .Header__logo {
+  img {
+    @media screen and (max-width: 350px) {
+      width: 65%;
+    }
+  }
 }
 .Header__top {
   align-items: center;
@@ -249,4 +257,14 @@
       }
     }
   }
+}
+.Header__sidebar {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 0;
+  position: absolute;
+  z-index: 99;
 }

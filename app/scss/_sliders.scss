@@ -1,4 +1,7 @@
 .Sliders {
+  .Sliders__wrapper {
+    justify-content: space-between;
+  }
   .bx-wrapper {
     background-color: transparent;
     border: none;
@@ -6,6 +9,12 @@
     margin-bottom: 0;
     max-width: 100% !important;
     padding: 0 3rem;
+    @media screen and (max-width: 991px) {
+      padding: 0 0 3rem 0;
+    }
+    .bx-viewport {
+      height: auto !important;
+    }
     .bx-controls-direction {
       a {
         height: auto;
@@ -36,8 +45,47 @@
     .bx-next {
       right: 0;
     }
+    .bx-pager {
+      bottom: 0;
+      position: relative;
+      &.bx-default-pager {
+        a {
+          border-radius: 50%;
+          height: 25px;
+          width: 25px;
+          &.active {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    .Sliders__wrapper {
+      justify-content: normal;
+    }
+  }
+  &--firstColor {
+    .bx-wrapper {
+      .bx-prev, .bx-next {
+        color: $firstColor;
+        [class^="icon-"] {
+          border-color: $firstColor;
+        }
+      }
+      .bx-pager {
+        &.bx-default-pager {
+          a {
+            &.active {
+              background-color: $firstColor;
+            }
+          }
+        }
+      }
+    }
   }
 }
 .Sliders__item {
   margin-right: 15px;
+  @media screen and (max-width: 767px) {
+    margin-right: 0;
+  }
 }

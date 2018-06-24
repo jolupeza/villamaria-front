@@ -3,8 +3,14 @@
     padding: 3rem 0;
   }
   &--50 {
+    @media screen and (max-width: 991px) {
+      flex-wrap: wrap;
+    }
     .Page__figure, .Page__content {
       width: 50%;
+      @media screen and (max-width: 991px) {
+        width: 100%;
+      }
       p {
         width: 100%;
       }
@@ -13,10 +19,16 @@
   &--bg {
     background-size: cover;
     background-repeat: no-repeat;
+    @media screen and (max-width: 767px) {
+      background-position: center 0;
+    }
   }
   &--carousel {
     height: 100vh;
     overflow-y: hidden;
+    @media screen and (max-width: 991px) {
+      height: auto;
+    }
   }
   &--white {
     .Page__title, .Page__subtitle, p {
