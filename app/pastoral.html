@@ -10,15 +10,18 @@
 <body>
   <header class="Header">
     <div class="container">
+      <button class="d-lg-none Header__sidebar js-sidebar">
+        <i class="icon-bars"></i>
+      </button>
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-lg-3">
           <h1 class="Header__logo text-center mb-0" data-image="images/logo.png" data-imagehover="images/logo-hover.png">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-9">
           <aside class="Header__top">
             <nav class="Header__navTop">
               <ul class="Header__menuTop">
@@ -59,7 +62,7 @@
           </nav>
         </div>
       </div>
-      <nav class="Header__navMain mt-3" id="js-main-menu">
+      <nav class="d-none d-lg-block Header__navMain mt-3" id="js-main-menu">
         <ul class="Header__listMain">
           <li><a href="colegio.html">El colegio</a></li>
           <li><a href="propuesta.html">Propuesta formativa</a></li>
@@ -72,11 +75,34 @@
     </div>
   </header>
 
+  <aside class="Sidebar">
+    <button class="Sidebar__close js-sidebar"><i class="icon-close"></i></button>
+    <h1 class="Sidebar__logo text-right">
+      <a href="index.html" title="Colegio Villa María - Miraflores">
+        <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
+      </a>
+    </h1>
+    <nav class="Sidebar__nav">
+      <ul class="Sidebar__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="colegio.html">El colegio</a></li>
+        <li><a href="propuesta.html">Propuesta Educativa</a></li>
+        <li class="current-menu-item"><a href="pastoral.html">Pastoral</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="vidaescolar.html">Vida Escolar</a></li>
+        <li><a href="ubicanos.html">Ubícanos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <section class="Front">
-    <div id="carouselFront" class="carousel slide Carousel Carousel--front" data-ride="carousel">
+    <div class="Carousel Carousel--front">
       <div class="carousel-inner Carousel__inner">
         <div class="carousel-item active Carousel__item">
-          <img class="d-block img-fluid" src="images/portada-pastoral.jpg" alt="Portada Pastoral" />
+          <picture>
+            <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/portada-responsive.jpg" />
+            <img class="d-block img-fluid" src="images/portada-pastoral.jpg" alt="Portada Pastoral" />
+          </picture>
           <div class="carousel-caption Carousel__caption Carousel__caption--right Carousel__caption--bottom">
             <header class="Carousel__caption__header">
               <h3 class="Carousel__caption__subtitle text-uppercase">Llevamos el</h3>
@@ -88,7 +114,8 @@
       </div>
     </div>
     <aside class="Front__message">
-      <p class="text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="d-none d-lg-block text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="text-center mb-0 d-lg-none"><a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
     </aside>
   </section>
 
@@ -98,12 +125,12 @@
       <h3 class="Page__subtitle text-uppercase text-center mb-5">Llevando el <span>Mensaje</span></h3>
 
       <div class="row align-items-center mb-5">
-        <div class="col-7">
+        <div class="col-lg-7">
           <p>El Plan Pastoral se fundamenta en nuestro compromiso como miembros de la Iglesia, asumiendo la responsabilidad de llevar el mensaje de Jesús a las familias y a todos los miembros de nuestra Comunidad Educativa teniendo como modelo principal a nuestra madre la Virgen María.</p>
           <p>Nuestro Colegio que a la vez pertenece a la Congregación de la Hermanas Siervas del Inmaculado Corazón de María, nos brinda los lineamientos a seguir en la Pastoral, en comunión con nuestra Iglesia.</p>
           <p>Como agentes de servicio en pastoral estamos llamados e impulsados a una nueva evangelización, más vivencial y participativa tanto a nivel interno, en las familias, para así desarrollarla en la proyección social. Esto se da mediante un encuentro profundo de fe entre nuestras alumnas y Dios, a través de la educación en la fe y su formación integral  para así ir sembrando la semilla de la Fe en sus familias y que luego se extienda hacia el prójimo; formando así una sociedad más solidaria a imitación de Cristo.</p>
         </div>
-        <div class="col-5">
+        <div class="col-lg-5">
           <figure class="Page__figure text-center">
             <img src="images/llevando-el-mensaje.jpg" alt="Llevando el mensaje" class="img-fluid" />
           </figure>
@@ -218,7 +245,7 @@
   <footer class="Footer">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list text-uppercase">
               <li><a href="#">Apafa</a></li>
@@ -227,14 +254,14 @@
             </ul>
           </nav>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
           <h1 class="Footer__logo text-center">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list">
               <li><i class="icon-phone"></i> 445-0547 / 445-3592</li>

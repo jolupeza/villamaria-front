@@ -42,7 +42,7 @@
       }
     }
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 991px) {
     flex-wrap: nowrap;
     justify-content: flex-start;
     margin-bottom: 1rem;
@@ -79,7 +79,15 @@
       border-color: $thirdColor;
     }
   }
+  @media screen and (max-width: 991px) {
+    font-size: 1rem;
+  }
 }
 .Tabs__content {
   padding: 1rem;
+  .card-header {
+    @media screen and (max-width: 991px) {
+      padding: .5rem .75rem;
+    }
+  }
 }

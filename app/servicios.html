@@ -10,15 +10,18 @@
 <body>
   <header class="Header">
     <div class="container">
+      <button class="d-lg-none Header__sidebar js-sidebar">
+        <i class="icon-bars"></i>
+      </button>
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-lg-3">
           <h1 class="Header__logo text-center mb-0" data-image="images/logo.png" data-imagehover="images/logo-hover.png">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-9">
           <aside class="Header__top">
             <nav class="Header__navTop">
               <ul class="Header__menuTop">
@@ -59,7 +62,7 @@
           </nav>
         </div>
       </div>
-      <nav class="Header__navMain mt-3" id="js-main-menu">
+      <nav class="d-none d-lg-block Header__navMain mt-3" id="js-main-menu">
         <ul class="Header__listMain">
           <li><a href="colegio.html">El colegio</a></li>
           <li><a href="propuesta.html">Propuesta formativa</a></li>
@@ -72,11 +75,34 @@
     </div>
   </header>
 
+  <aside class="Sidebar">
+    <button class="Sidebar__close js-sidebar"><i class="icon-close"></i></button>
+    <h1 class="Sidebar__logo text-right">
+      <a href="index.html" title="Colegio Villa María - Miraflores">
+        <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
+      </a>
+    </h1>
+    <nav class="Sidebar__nav">
+      <ul class="Sidebar__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="colegio.html">El colegio</a></li>
+        <li><a href="propuesta.html">Propuesta Educativa</a></li>
+        <li><a href="pastoral.html">Pastoral</a></li>
+        <li class="current-menu-item"><a href="servicios.html">Servicios</a></li>
+        <li><a href="vidaescolar.html">Vida Escolar</a></li>
+        <li><a href="ubicanos.html">Ubícanos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <section class="Front">
-    <div id="carouselFront" class="carousel slide Carousel Carousel--front" data-ride="carousel">
+    <div class="Carousel Carousel--front">
       <div class="carousel-inner Carousel__inner">
         <div class="carousel-item active Carousel__item">
-          <img class="d-block img-fluid" src="images/portada-servicios.jpg" alt="Portada Servicios" />
+          <picture>
+            <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/portada-responsive.jpg" />
+            <img class="d-block img-fluid" src="images/portada-servicios.jpg" alt="Portada Servicios" />
+          </picture>
           <div class="carousel-caption Carousel__caption Carousel__caption--left Carousel__caption--bottom">
             <header class="Carousel__caption__header">
               <h3 class="Carousel__caption__subtitle text-uppercase">Primero la</h3>
@@ -88,7 +114,8 @@
       </div>
     </div>
     <aside class="Front__message">
-      <p class="text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="d-none d-lg-block text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="text-center mb-0 d-lg-none"><a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
     </aside>
   </section>
 
@@ -125,8 +152,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -143,8 +170,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -161,8 +188,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -179,8 +206,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -197,8 +224,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -215,8 +242,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -238,8 +265,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -256,8 +283,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -274,8 +301,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -292,8 +319,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -310,8 +337,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -328,8 +355,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -351,8 +378,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -369,8 +396,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -387,8 +414,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -405,8 +432,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -423,8 +450,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -441,8 +468,8 @@
                   <div class="card-body">
                     <p>Se desarrolla en el Information Center. A través del mismo, se busca desarrollar en las niñas el gusto y el hábito por la lectura.</p>
                     <p class="text-center">
-                      <img src="images/servicios-image-01.jpg" alt="" />
-                      <img src="images/servicios-image-02.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-01.jpg" alt="" />
+                      <img class="img-fluid" src="images/servicios-image-02.jpg" alt="" />
                     </p>
                   </div>
                 </div>
@@ -457,7 +484,7 @@
   <footer class="Footer">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list text-uppercase">
               <li><a href="#">Apafa</a></li>
@@ -466,14 +493,14 @@
             </ul>
           </nav>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
           <h1 class="Footer__logo text-center">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list">
               <li><i class="icon-phone"></i> 445-0547 / 445-3592</li>
