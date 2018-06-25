@@ -1,8 +1,14 @@
 .Breadcrumb {
   background-color: transparent;
   border-radius: 0;
+  @media screen and (max-width: 767px) {
+    padding: .75rem 0;
+  }
   li {
     margin-right: 2rem;
+    @media screen and (max-width: 767px) {
+      margin-right: .5rem;
+    }
     &:last-child {
       margin-right: 0;
     }
@@ -14,6 +20,9 @@
     + .breadcrumb-item {
       &::before {
         margin-right: 2rem;
+        @media screen and (max-width: 767px) {
+          margin-right: .5em;
+        }
       }
     }
     a {

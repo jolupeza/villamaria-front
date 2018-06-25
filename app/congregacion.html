@@ -10,15 +10,18 @@
 <body>
   <header class="Header">
     <div class="container">
+      <button class="d-lg-none Header__sidebar js-sidebar">
+        <i class="icon-bars"></i>
+      </button>
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-lg-3">
           <h1 class="Header__logo text-center mb-0" data-image="images/logo.png" data-imagehover="images/logo-hover.png">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-9">
           <aside class="Header__top">
             <nav class="Header__navTop">
               <ul class="Header__menuTop">
@@ -59,7 +62,7 @@
           </nav>
         </div>
       </div>
-      <nav class="Header__navMain mt-3" id="js-main-menu">
+      <nav class="d-none d-lg-block Header__navMain mt-3" id="js-main-menu">
         <ul class="Header__listMain">
           <li class="current-page-ancestor"><a href="colegio.html">El colegio</a></li>
           <li><a href="propuesta.html">Propuesta formativa</a></li>
@@ -72,11 +75,34 @@
     </div>
   </header>
 
+  <aside class="Sidebar">
+    <button class="Sidebar__close js-sidebar"><i class="icon-close"></i></button>
+    <h1 class="Sidebar__logo text-right">
+      <a href="index.html" title="Colegio Villa María - Miraflores">
+        <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
+      </a>
+    </h1>
+    <nav class="Sidebar__nav">
+      <ul class="Sidebar__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="current-page-ancestor"><a href="colegio.html">El colegio</a></li>
+        <li><a href="propuesta.html">Propuesta Educativa</a></li>
+        <li><a href="pastoral.html">Pastoral</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="vidaescolar.html">Vida Escolar</a></li>
+        <li><a href="ubicanos.html">Ubícanos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <section class="Front">
-    <div id="carouselFront" class="carousel slide Carousel Carousel--front" data-ride="carousel">
+    <div class="Carousel Carousel--front">
       <div class="carousel-inner Carousel__inner">
         <div class="carousel-item active Carousel__item">
-          <img class="d-block img-fluid" src="images/portada-congregacion.jpg" alt="Portada Congregación" />
+          <picture>
+            <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/portada-responsive.jpg" />
+            <img class="d-block img-fluid" src="images/portada-congregacion.jpg" alt="Portada Congregación" />
+          </picture>
           <div class="carousel-caption Carousel__caption Carousel__caption--right Carousel__caption--bottom">
             <header class="Carousel__caption__header">
               <h3 class="Carousel__caption__subtitle text-uppercase">Escuchamos</h3>
@@ -88,7 +114,8 @@
       </div>
     </div>
     <aside class="Front__message">
-      <p class="text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="d-none d-lg-block text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="text-center mb-0 d-lg-none"><a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
     </aside>
   </section>
 
@@ -106,11 +133,11 @@
       <h3 class="Page__subtitle text-uppercase text-center mb-5">Trabajamos con <span>Misión</span></h3>
 
       <div class="row align-items-center">
-        <div class="col-6">
+        <div class="col-lg-6">
           <p style="text-align: center; font-style: italic;">Animadas por nuestro carisma de amor, esperanza creadora y fidelidad, y en imitación a María, Nosotras, las Hermanas, Siervas del Inmaculado Corazón de María de Inmaculata, Pennsylvania, Proclamamos el mensaje Evangélico en el Espíritu de Jesús Redentor.</p>
           <p style="text-align: center; font-style: italic;">Fortalecidas por una vida de consagración, alimentadas por la oración y la Eucaristía y sostenidas por la vida en comunidad, Irradiamos servicio gozoso y promovemos los valores Evangélicos, ofreciendo compasión a todo el pueblo de Dios a través de nuestra misión de evangelizar, catequizar y enseñar.</p>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
           <figure class="Page__figure text-center">
             <img src="images/congregacion-mision.jpg" alt="Trabajamos con Misión" class="img-fluid" />
           </figure>
@@ -124,7 +151,7 @@
       </div>
 
       <div class="row">
-        <div class="col-6 Box Box--padding">
+        <div class="col-md-6 Box Box--padding">
           <article class="Box__item mb-5">
             <figure class="Box__figure text-center">
               <img src="images/star.png" alt="" class="img-fluid" />
@@ -135,7 +162,7 @@
             </div>
           </article>
         </div>
-        <div class="col-6 Box Box--padding">
+        <div class="col-md-6 Box Box--padding">
           <article class="Box__item mb-5">
             <figure class="Box__figure text-center">
               <img src="images/bird.png" alt="" class="img-fluid" />
@@ -145,7 +172,7 @@
             </div>
           </article>
         </div>
-        <div class="col-6 Box Box--padding">
+        <div class="col-md-6 Box Box--padding">
           <article class="Box__item mb-5">
             <figure class="Box__figure text-center">
               <img src="images/heart.png" alt="" class="img-fluid" />
@@ -155,7 +182,7 @@
             </div>
           </article>
         </div>
-        <div class="col-6 Box Box--padding">
+        <div class="col-md-6 Box Box--padding">
           <article class="Box__item mb-5">
             <figure class="Box__figure text-center">
               <img src="images/hands.png" alt="" class="img-fluid" />
@@ -172,7 +199,7 @@
   <footer class="Footer">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list text-uppercase">
               <li><a href="#">Apafa</a></li>
@@ -181,14 +208,14 @@
             </ul>
           </nav>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
           <h1 class="Footer__logo text-center">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list">
               <li><i class="icon-phone"></i> 445-0547 / 445-3592</li>

@@ -7689,8 +7689,8 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg); }
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -7717,8 +7717,8 @@ a.text-dark:hover, a.text-dark:focus {
     -webkit-transform: skewX(-0.78125deg) skewY(-0.78125deg);
     transform: skewX(-0.78125deg) skewY(-0.78125deg); }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg); }
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg); }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
     transform: skewX(-0.19531deg) skewY(-0.19531deg); } }
@@ -11050,7 +11050,9 @@ li {
     .Box__item {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
 
 .Box__figure [class^="icon-"], .Box__figure img {
   border: 2px solid rgba(147, 146, 146, 0.3);
@@ -11062,6 +11064,10 @@ li {
   font-size: 3rem;
   padding: 1rem; }
 
+@media screen and (max-width: 767px) {
+  .Box__figure {
+    width: 100%; } }
+
 .Box__content {
   width: 100%; }
 
@@ -11070,14 +11076,6 @@ li {
     margin-bottom: 0;
     padding: 0 .8rem; } }
 
-/* .Box__avatar {
-  @media screen and (max-width: 767px) {
-    width: 50%;
-    + .Box__content {
-      width: 50%;
-    }
-  }
-} */
 .Card__date {
   color: #939292; }
 
@@ -11133,14 +11131,23 @@ li {
 .Breadcrumb {
   background-color: transparent;
   border-radius: 0; }
+  @media screen and (max-width: 767px) {
+    .Breadcrumb {
+      padding: .75rem 0; } }
   .Breadcrumb li {
     margin-right: 2rem; }
+    @media screen and (max-width: 767px) {
+      .Breadcrumb li {
+        margin-right: .5rem; } }
     .Breadcrumb li:last-child {
       margin-right: 0; }
   .Breadcrumb .active {
     font-weight: 700; }
   .Breadcrumb .breadcrumb-item + .breadcrumb-item::before {
     margin-right: 2rem; }
+    @media screen and (max-width: 767px) {
+      .Breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+        margin-right: .5em; } }
   .Breadcrumb .breadcrumb-item a {
     color: #252525;
     font-weight: 300; }
@@ -11174,23 +11181,56 @@ li {
           width: 100%; }
     .Accordion--portrait .Accordion__content {
       width: 100%; }
+  @media screen and (max-width: 767px) {
+    .Accordion--landscape {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
   .Accordion--landscape .Accordion__nav {
     width: 20%; }
     .Accordion--landscape .Accordion__nav--30 {
       width: 30%; }
       .Accordion--landscape .Accordion__nav--30 + .Accordion__content {
         width: 70%; }
+    @media screen and (max-width: 767px) {
+      .Accordion--landscape .Accordion__nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 100%; } }
   .Accordion--landscape .Accordion__list {
     border-right: 2px solid rgba(58, 58, 58, 0.45); }
+    @media screen and (max-width: 767px) {
+      .Accordion--landscape .Accordion__list {
+        border-bottom: 2px solid rgba(58, 58, 58, 0.45);
+        border-right: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        overflow: auto; } }
     .Accordion--landscape .Accordion__list li {
       text-align: right; }
+      @media screen and (max-width: 767px) {
+        .Accordion--landscape .Accordion__list li {
+          text-align: left; } }
       .Accordion--landscape .Accordion__list li a::after {
         height: 100%;
         right: -2px;
         top: 0;
         width: 2px; }
+        @media screen and (max-width: 767px) {
+          .Accordion--landscape .Accordion__list li a::after {
+            display: none;
+            /* bottom: -2px;
+              height: 2px;
+              left: 0;
+              right: auto;
+              top: auto;
+              width: 100%; */ } }
   .Accordion--landscape .Accordion__content {
     width: 80%; }
+    @media screen and (max-width: 767px) {
+      .Accordion--landscape .Accordion__content {
+        width: 100%; } }
 
 .Accordion__list {
   list-style: none;

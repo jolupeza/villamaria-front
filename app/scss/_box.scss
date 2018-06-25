@@ -36,6 +36,7 @@
   margin-bottom: 1rem;
   @media screen and (max-width: 767px) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 .Box__figure {
@@ -49,6 +50,9 @@
     font-size:  3rem;
     padding: 1rem;
   }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 }
 .Box__content {
   width: 100%;
@@ -59,11 +63,3 @@
     padding: 0 .8rem;
   }
 }
-/* .Box__avatar {
-  @media screen and (max-width: 767px) {
-    width: 50%;
-    + .Box__content {
-      width: 50%;
-    }
-  }
-} */

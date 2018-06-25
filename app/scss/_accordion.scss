@@ -28,6 +28,9 @@
     }
   }
   &--landscape {
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
     .Accordion__nav {
       width: 20%;
       &--30 {
@@ -36,23 +39,48 @@
           width: 70%;
         }
       }
+      @media screen and (max-width: 767px) {
+        display: flex;
+        width: 100%;
+      }
     }
     .Accordion__list {
       border-right: 2px solid rgba($accentColor, .45);
+      @media screen and (max-width: 767px) {
+        border-bottom: 2px solid rgba($accentColor, .45);
+        border-right: none;
+        display: flex;
+        overflow: auto;
+      }
       li {
         text-align: right;
+        @media screen and (max-width: 767px) {
+          text-align: left;
+        }
         a {
           &::after {
             height: 100%;
             right: -2px;
             top: 0;
             width: 2px;
+            @media screen and (max-width: 767px) {
+              display: none;
+              /* bottom: -2px;
+              height: 2px;
+              left: 0;
+              right: auto;
+              top: auto;
+              width: 100%; */
+            }
           }
         }
       }
     }
     .Accordion__content {
       width: 80%;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
     }
   }
 }

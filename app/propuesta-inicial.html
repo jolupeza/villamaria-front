@@ -10,15 +10,18 @@
 <body>
   <header class="Header">
     <div class="container">
+      <button class="d-lg-none Header__sidebar js-sidebar">
+        <i class="icon-bars"></i>
+      </button>
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-lg-3">
           <h1 class="Header__logo text-center mb-0" data-image="images/logo.png" data-imagehover="images/logo-hover.png">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-9">
           <aside class="Header__top">
             <nav class="Header__navTop">
               <ul class="Header__menuTop">
@@ -59,7 +62,7 @@
           </nav>
         </div>
       </div>
-      <nav class="Header__navMain mt-3" id="js-main-menu">
+      <nav class="d-none d-lg-block Header__navMain mt-3" id="js-main-menu">
         <ul class="Header__listMain">
           <li><a href="colegio.html">El colegio</a></li>
           <li class="active"><a href="propuesta.html">Propuesta formativa</a></li>
@@ -72,11 +75,34 @@
     </div>
   </header>
 
+  <aside class="Sidebar">
+    <button class="Sidebar__close js-sidebar"><i class="icon-close"></i></button>
+    <h1 class="Sidebar__logo text-right">
+      <a href="index.html" title="Colegio Villa María - Miraflores">
+        <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
+      </a>
+    </h1>
+    <nav class="Sidebar__nav">
+      <ul class="Sidebar__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="colegio.html">El colegio</a></li>
+        <li class="current-page-ancestor"><a href="propuesta.html">Propuesta Educativa</a></li>
+        <li><a href="pastoral.html">Pastoral</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="vidaescolar.html">Vida Escolar</a></li>
+        <li><a href="ubicanos.html">Ubícanos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <section class="Front">
-    <div id="carouselFront" class="carousel slide Carousel Carousel--front" data-ride="carousel">
+    <div class="Carousel Carousel--front">
       <div class="carousel-inner Carousel__inner">
         <div class="carousel-item active Carousel__item">
-          <img class="d-block w-100 img-fluid" src="images/portada-inicial.jpg" alt="Inicial">
+          <picture>
+            <source media="(max-width: 767px) and (orientation: portrait)" srcset="images/portada-responsive.jpg" />
+            <img class="d-block w-100 img-fluid" src="images/portada-inicial.jpg" alt="Inicial" />
+          </picture>
           <div class="carousel-caption Carousel__caption Carousel__caption--right Carousel__caption--bottom">
             <header class="Carousel__caption__header">
               <h3 class="Carousel__caption__subtitle text-uppercase">Mucho más</h3>
@@ -88,7 +114,8 @@
       </div>
     </div>
     <aside class="Front__message">
-      <p class="text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="d-none d-lg-block text-center mb-0">Pertenece a nuestra familia y prepárate para cambiar el mundo. ¿Estás listo? <a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
+      <p class="text-center mb-0 d-lg-none"><a href="#" class="Button Button--ghost Button--sm">Admisión 2019</a></p>
     </aside>
   </section>
 
@@ -106,12 +133,12 @@
       <h3 class="Page__subtitle text-uppercase text-center mb-5">Metodología <span>activa</span></h3>
 
       <div class="row align-items-center">
-        <div class="col-7">
+        <div class="col-lg-7">
           <p>Nuestro Nivel Inicial comprende Pre-Kinder y Kinder. Cada uno de ellos cuenta con personal altamente calificado y con instalaciones debidamente implementadas.  En él se brinda a las niñas un ambiente cálido y motivador que permita fomentar su curiosidad, el desarrollo de sus habilidades y el deseo de investigar. Procuramos una educación personalizada e integral, tomando en cuenta las diferencias individuales y los distintos ritmos de aprendizaje de cada alumna, desarrollando sus competencias de acuerdo con las demandas de la sociedad.</p>
           <p>Nuestra principal meta es guiar a nuestras niñas hacia un mayor conocimiento de Dios, para que alimentadas por su fe, adquieran y apliquen a sus vidas valores católicos, logrando desarrollarse como personas felices, autónomas y responsables.</p>
           <p>Nos basamos en una metodología activa, propiciando diversas actividades a través del juego y experiencias directas, brindando a las alumnas un entorno bilingüe, con el propósito de ayudarlas a adquirir el aprendizaje del idioma inglés de una manera natural, significativa y vivencial.</p>
         </div>
-        <div class="col-5">
+        <div class="col-lg-5">
           <figure class="Page__figure text-center">
             <img src="images/metodologia-activa.jpg" alt="Metodología activa" class="img-fluid" />
           </figure>
@@ -189,89 +216,89 @@
 
       <article class="Page__notice mb-4">
         <div class="row">
-          <div class="col-4">
+          <div class="col-lg-4">
             <h3 class="text-uppercase">Information center</h3>
             <p>Es un ambiente en el cual las alumnas tienen la oportunidad de leer y consultar diversos libros, realizar préstamos de los mismos para llevarlos a casa, y también cuentan con computadoras con acceso a Internet para realizar investigaciones.</p>
           </div>
-          <div class="col-4">
-            <figure class="Page__figure">
-              <img src="images/information-center-square.jpg" alt="" class="img-fluid d-block">
+          <div class="col-md-6 col-lg-4">
+            <figure class="Page__figure text-center">
+              <img src="images/information-center-square.jpg" alt="" class="img-fluid" />
             </figure>
           </div>
-          <div class="col-4">
-            <figure class="Page__figure">
-              <img src="images/information-center-square.jpg" alt="" class="img-fluid d-block">
+          <div class="col-md-6 col-lg-4">
+            <figure class="Page__figure text-center">
+              <img src="images/information-center-square.jpg" alt="" class="img-fluid" />
             </figure>
           </div>
         </div>
         <figure class="Page__figure">
-          <img src="images/information-center-rectangle.jpg" alt="" class="img-fluid d-block">
+          <img src="images/information-center-rectangle.jpg" alt="" class="img-fluid" />
         </figure>
       </article>
 
       <article class="Page__notice mb-4">
         <div class="row">
-          <div class="col-4">
+          <div class="col-lg-4">
             <h3 class="text-uppercase">Computer lab</h3>
             <p>Nuestro Computer Lab cuenta con modernos equipos de cómputo acondicionados especialmente para el uso de nuestras niñas. También contamos con Software Originales Microsoft, Office, Print Artist, material didáctico, cañón multimedia e impresora en red láser, que ayudan a nuestras niñas a desarrollar sus habilidades y destrezas en el mundo informático.</p>
           </div>
-          <div class="col-4">
-            <figure class="Page__figure">
-              <img src="images/computer-lab-square.jpg" alt="" class="img-fluid d-block">
+          <div class="col-md-6 col-lg-4">
+            <figure class="Page__figure text-center">
+              <img src="images/computer-lab-square.jpg" alt="" class="img-fluid" />
             </figure>
           </div>
-          <div class="col-4">
-            <figure class="Page__figure">
-              <img src="images/computer-lab-square.jpg" alt="" class="img-fluid d-block">
+          <div class="col-md-6 col-lg-4">
+            <figure class="Page__figure text-center">
+              <img src="images/computer-lab-square.jpg" alt="" class="img-fluid" />
             </figure>
           </div>
         </div>
         <figure class="Page__figure">
-          <img src="images/computer-lab-rectangle.jpg" alt="" class="img-fluid d-block">
+          <img src="images/computer-lab-rectangle.jpg" alt="" class="img-fluid" />
         </figure>
       </article>
 
       <article class="Page__notice mb-4">
         <div class="row">
-          <div class="col-4">
+          <div class="col-lg-4">
             <h3 class="text-uppercase">English Lab</h3>
             <p>Laboratorio moderno, con computadoras con sistemas multimedia (Audio y Vídeo) y con conexión a internet en todas las Pc's.</p>
           </div>
-          <div class="col-4">
-            <figure class="Page__figure">
-              <img src="images/information-center-square.jpg" alt="" class="img-fluid d-block">
+          <div class="col-md-6 col-lg-4">
+            <figure class="Page__figure text-center">
+              <img src="images/information-center-square.jpg" alt="" class="img-fluid" />
             </figure>
           </div>
-          <div class="col-4">
-            <figure class="Page__figure">
-              <img src="images/information-center-square.jpg" alt="" class="img-fluid d-block">
+          <div class="col-md-6 col-lg-4">
+            <figure class="Page__figure text-center">
+              <img src="images/information-center-square.jpg" alt="" class="img-fluid" />
             </figure>
           </div>
         </div>
         <figure class="Page__figure">
-          <img src="images/information-center-rectangle.jpg" alt="" class="img-fluid d-block">
+          <img src="images/information-center-rectangle.jpg" alt="" class="img-fluid" />
         </figure>
       </article>
 
       <article class="Page__notice mb-4">
         <div class="row">
-          <div class="col-4">
+          <div class="col-lg-4">
             <h3 class="text-uppercase">Science Lab</h3>
             <p>Moderno Laboratorio, con equipos importados, 18 Microscopios Ópticos y 1 Microscopio Electrónico, conectado a una Computadora con el Software necesario para proyectar imágenes, generar videos y presentaciones con diapositivas para que las niñas puedan ampliar su campo formativo en la exploración del conocimiento de nuestro mundo.</p>
           </div>
-          <div class="col-4">
-            <figure class="Page__figure">
-              <img src="images/computer-lab-square.jpg" alt="" class="img-fluid d-block">
+          <div class="col-md-6 col-lg-4">
+            <figure class="Page__figure text-center">
+              <img src="images/computer-lab-square.jpg" alt="" class="img-fluid" />
             </figure>
           </div>
-          <div class="col-4">
-            <figure class="Page__figure">
-              <img src="images/computer-lab-square.jpg" alt="" class="img-fluid d-block">
+          <div class="col-md-6 col-lg-4">
+            <figure class="Page__figure text-center">
+              <img src="images/computer-lab-square.jpg" alt="" class="img-fluid" />
             </figure>
           </div>
         </div>
         <figure class="Page__figure">
-          <img src="images/computer-lab-rectangle.jpg" alt="" class="img-fluid d-block">
+          <img src="images/computer-lab-rectangle.jpg" alt="" class="img-fluid" />
         </figure>
       </article>
 
@@ -454,7 +481,7 @@
   <footer class="Footer">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list text-uppercase">
               <li><a href="#">Apafa</a></li>
@@ -463,14 +490,14 @@
             </ul>
           </nav>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
           <h1 class="Footer__logo text-center">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list">
               <li><i class="icon-phone"></i> 445-0547 / 445-3592</li>
