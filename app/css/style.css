@@ -11225,6 +11225,9 @@ li {
       text-align: right; }
       @media screen and (max-width: 767px) {
         .Accordion--landscape .Accordion__list li {
+          -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
           text-align: left; } }
       .Accordion--landscape .Accordion__list li a::after {
         height: 100%;
@@ -11281,6 +11284,21 @@ li {
 
 .Accordion__content {
   padding: 1rem; }
+
+.Accordion__figure img:first-child {
+  margin-right: 1.5rem; }
+  @media screen and (max-width: 767px) {
+    .Accordion__figure img:first-child {
+      margin-bottom: 1.5rem;
+      margin-right: 0; } }
+
+@media screen and (max-width: 767px) {
+  .Accordion__figure {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; } }
 
 .Tabs {
   margin: 1.5rem 0; }
@@ -11491,12 +11509,12 @@ select.Form__control:not([size]):not([multiple]) {
     justify-content: normal; }
 
 .Sliders--firstColor .bx-wrapper .bx-prev, .Sliders--firstColor .bx-wrapper .bx-next {
-  color: #1f376c; }
+  color: #348fce; }
   .Sliders--firstColor .bx-wrapper .bx-prev [class^="icon-"], .Sliders--firstColor .bx-wrapper .bx-next [class^="icon-"] {
-    border-color: #1f376c; }
+    border-color: #348fce; }
 
 .Sliders--firstColor .bx-wrapper .bx-pager.bx-default-pager a.active {
-  background-color: #1f376c; }
+  background-color: #348fce; }
 
 .Sliders__item {
   margin-right: 15px; }

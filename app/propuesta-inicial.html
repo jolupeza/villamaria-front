@@ -6,6 +6,9 @@
   <title>Colegio Villa María - Miraflores</title>
 
   <link rel="stylesheet" href="css/style.css" />
+  <script>
+    var infoMaps = [];
+  </script>
 </head>
 <body>
   <header class="Header">
@@ -161,53 +164,52 @@
         <section class="Accordion__content">
           <article class="collapse multi-collapse show" id="areas-curriculares" data-namecollapse="collapse-areas-curriculares" data-parent="#accordion-inicial">
             <p>La atención educativa se basa en el respeto de las necesidades e intereses de las niñas y el acompañamiento en su desarrollo personal, social, motriz, cognitivo y afectivo.</p>
-
-            <figure class="mt-3 d-flex justify-content-around">
+            <p class="d-flex justify-content-between Accordion__figure">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
-            </figure>
+            </p>
           </article>
           <article class="collapse multi-collapse" id="formacion-religiosa" data-namecollapse="collapse-formacion-religiosa" data-parent="#accordion-inicial">
             <p>La atención educativa se basa en el respeto de las necesidades e intereses de las niñas y el acompañamiento en su desarrollo personal, social, motriz, cognitivo y afectivo.</p>
-            <figure class="mt-3 d-flex justify-content-around">
+            <p class="d-flex justify-content-between Accordion__figure">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
-            </figure>
+            </p>
           </article>
           <article class="collapse multi-collapse" id="ingles" data-namecollapse="collapse-ingles" data-parent="#accordion-inicial">
             <p>La atención educativa se basa en el respeto de las necesidades e intereses de las niñas y el acompañamiento en su desarrollo personal, social, motriz, cognitivo y afectivo.</p>
-            <figure class="mt-3 d-flex justify-content-around">
+            <p class="d-flex justify-content-between Accordion__figure">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
-            </figure>
+            </p>
           </article>
           <article class="collapse multi-collapse" id="ciencia-y-tecnologia" data-namecollapse="collapse-ciencia-y-tecnologia" data-parent="#accordion-inicial">
             <p>La atención educativa se basa en el respeto de las necesidades e intereses de las niñas y el acompañamiento en su desarrollo personal, social, motriz, cognitivo y afectivo.</p>
-            <figure class="mt-3 d-flex justify-content-around">
+            <p class="d-flex justify-content-between Accordion__figure">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
-            </figure>
+            </p>
           </article>
           <article class="collapse multi-collapse" id="matematica" data-namecollapse="collapse-matematica" data-parent="#accordion-inicial">
             <p>La atención educativa se basa en el respeto de las necesidades e intereses de las niñas y el acompañamiento en su desarrollo personal, social, motriz, cognitivo y afectivo.</p>
-            <figure class="mt-3 d-flex justify-content-around">
+            <p class="d-flex justify-content-between Accordion__figure">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
-            </figure>
+            </p>
           </article>
           <article class="collapse multi-collapse" id="personal-social" data-namecollapse="collapse-personal-social" data-parent="#accordion-inicial">
             <p>La atención educativa se basa en el respeto de las necesidades e intereses de las niñas y el acompañamiento en su desarrollo personal, social, motriz, cognitivo y afectivo.</p>
-            <figure class="mt-3 d-flex justify-content-around">
+            <p class="d-flex justify-content-between Accordion__figure">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
-            </figure>
+            </p>
           </article>
           <article class="collapse multi-collapse" id="psicomotriz" data-namecollapse="collapse-psicomotriz" data-parent="#accordion-inicial">
             <p>La atención educativa se basa en el respeto de las necesidades e intereses de las niñas y el acompañamiento en su desarrollo personal, social, motriz, cognitivo y afectivo.</p>
-            <figure class="mt-3 d-flex justify-content-around">
+            <p class="d-flex justify-content-between Accordion__figure">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
               <img src="images/areas-curriculares.jpg" alt="Áreas curriculares" class="img-fluid">
-            </figure>
+            </p>
           </article>
         </section>
       </section>
@@ -318,9 +320,9 @@
             </li>
           </ul>
           <div class="tab-content Tabs__content" id="myTabContent">
-            <div class="Tabs__pane tab-pane fade show active" id="academicos" role="tabpanel" aria-labelledby="academicos-tab">
-              <div class="Box__wrapper">
-                <article class="Box__item">
+            <div class="Sliders Sliders--firstColor Tabs__pane tab-pane fade show active" id="academicos" role="tabpanel" aria-labelledby="academicos-tab">
+              <div class="Sliders__wrapper academico-slider Box__wrapper" data-total="5">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -329,7 +331,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -338,7 +340,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -347,7 +349,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -356,7 +358,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -367,9 +369,9 @@
                 </article>
               </div>
             </div>
-            <div class="Tabs__pane tab-pane fade" id="a-las-alumnas" role="tabpanel" aria-labelledby="a-las-alumnas-tab">
-              <div class="Box__wrapper">
-                <article class="Box__item">
+            <div class="Sliders Sliders--firstColor Tabs__pane tab-pane fade" id="a-las-alumnas" role="tabpanel" aria-labelledby="a-las-alumnas-tab">
+              <div class="Sliders__wrapper a-las-alumnas-slider Box__wrapper" data-total="5">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -378,7 +380,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -387,7 +389,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -396,7 +398,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -405,7 +407,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -416,9 +418,9 @@
                 </article>
               </div>
             </div>
-            <div class="Tabs__pane tab-pane fade" id="extracurriculares" role="tabpanel" aria-labelledby="extracurriculares-tab">
-              <div class="Box__wrapper">
-                <article class="Box__item">
+            <div class="Sliders Sliders--firstColor Tabs__pane tab-pane fade" id="extracurriculares" role="tabpanel" aria-labelledby="extracurriculares-tab">
+              <div class="Sliders__wrapper extracurriculares-slider Box__wrapper" data-total="5">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -427,7 +429,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -436,7 +438,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -445,7 +447,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>
@@ -454,7 +456,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur.</p>
                   </div>
                 </article>
-                <article class="Box__item">
+                <article class="Box__item Sliders__item">
                   <figure class="Box__figure text-center">
                     <i class="icon-world"></i>
                   </figure>

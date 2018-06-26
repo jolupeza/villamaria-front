@@ -56,6 +56,39 @@
           md: 2,
           xs: 1
         }
+      },
+      bxAcademico = {
+        wrapper: $('.academico-slider'),
+        bx: null,
+        margin: 15,
+        media: {
+          xl: 5,
+          lg: 5,
+          md: 3,
+          xs: 1
+        }
+      },
+      bxAlumnas = {
+        wrapper: $('.a-las-alumnas-slider'),
+        bx: null,
+        margin: 15,
+        media: {
+          xl: 5,
+          lg: 5,
+          md: 3,
+          xs: 1
+        }
+      },
+      bxExtra = {
+        wrapper: $('.extracurriculares-slider'),
+        bx: null,
+        margin: 15,
+        media: {
+          xl: 5,
+          lg: 5,
+          md: 3,
+          xs: 1
+        }
       };
 
   $(function () {
@@ -86,6 +119,24 @@
     if (checkBxSlider(bxPrimaria)) {
       bxPrimaria.bx = bxPrimaria.wrapper.bxSlider(
         initBxSlider(bxPrimaria)
+      );
+    }
+
+    if (checkBxSlider(bxAcademico)) {
+      bxAcademico.bx = bxAcademico.wrapper.bxSlider(
+        initBxSlider(bxAcademico)
+      );
+    }
+
+    if (checkBxSlider(bxAlumnas)) {
+      bxAlumnas.bx = bxAlumnas.wrapper.bxSlider(
+        initBxSlider(bxAlumnas)
+      );
+    }
+
+    if (checkBxSlider(bxExtra)) {
+      bxExtra.bx = bxExtra.wrapper.bxSlider(
+        initBxSlider(bxExtra)
       );
     }
 
@@ -129,7 +180,69 @@
           bxPrimaria.bx = null;
         }
       }
-    })
+    });
+
+    $('#tabsServices').on('shown.bs.tab', () => {
+      if (bxAcademico.bx === null) {
+        if (checkBxSlider(bxAcademico)) {
+          bxAcademico.bx = bxAcademico.wrapper.bxSlider(
+            initBxSlider(bxAcademico, true)
+          );
+        } else {
+          if (bxAcademico.bx !== null) {
+            bxAcademico.bx.destroySlider();
+            bxAcademico.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxAcademico)) {
+          bxAcademico.bx.reloadSlider(initBxSlider(bxAcademico, true));
+        } else {
+          bxAcademico.bx.destroySlider();
+          bxAcademico.bx = null;
+        }
+      }
+
+      if (bxAlumnas.bx === null) {
+        if (checkBxSlider(bxAlumnas)) {
+          bxAlumnas.bx = bxAlumnas.wrapper.bxSlider(
+            initBxSlider(bxAlumnas, true)
+          );
+        } else {
+          if (bxAlumnas.bx !== null) {
+            bxAlumnas.bx.destroySlider();
+            bxAlumnas.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxAlumnas)) {
+          bxAlumnas.bx.reloadSlider(initBxSlider(bxAlumnas, true));
+        } else {
+          bxAlumnas.bx.destroySlider();
+          bxAlumnas.bx = null;
+        }
+      }
+
+      if (bxExtra.bx === null) {
+        if (checkBxSlider(bxExtra)) {
+          bxExtra.bx = bxExtra.wrapper.bxSlider(
+            initBxSlider(bxExtra, true)
+          );
+        } else {
+          if (bxExtra.bx !== null) {
+            bxExtra.bx.destroySlider();
+            bxExtra.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxExtra)) {
+          bxExtra.bx.reloadSlider(initBxSlider(bxExtra, true));
+        } else {
+          bxExtra.bx.destroySlider();
+          bxExtra.bx = null;
+        }
+      }
+    });
 
     $window.on('resize', () => {
       if (bxTestimonials.bx === null) {
@@ -229,6 +342,66 @@
         } else {
           bxPrimaria.bx.destroySlider();
           bxPrimaria.bx = null;
+        }
+      }
+
+      if (bxAcademico.bx === null) {
+        if (checkBxSlider(bxAcademico)) {
+          bxAcademico.bx = bxAcademico.wrapper.bxSlider(
+            initBxSlider(bxAcademico, true)
+          );
+        } else {
+          if (bxAcademico.bx !== null) {
+            bxAcademico.bx.destroySlider();
+            bxAcademico.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxAcademico)) {
+          bxAcademico.bx.reloadSlider(initBxSlider(bxAcademico, true));
+        } else {
+          bxAcademico.bx.destroySlider();
+          bxAcademico.bx = null;
+        }
+      }
+
+      if (bxAlumnas.bx === null) {
+        if (checkBxSlider(bxAlumnas)) {
+          bxAlumnas.bx = bxAlumnas.wrapper.bxSlider(
+            initBxSlider(bxAlumnas, true)
+          );
+        } else {
+          if (bxAlumnas.bx !== null) {
+            bxAlumnas.bx.destroySlider();
+            bxAlumnas.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxAlumnas)) {
+          bxAlumnas.bx.reloadSlider(initBxSlider(bxAlumnas, true));
+        } else {
+          bxAlumnas.bx.destroySlider();
+          bxAlumnas.bx = null;
+        }
+      }
+
+      if (bxExtra.bx === null) {
+        if (checkBxSlider(bxExtra)) {
+          bxExtra.bx = bxExtra.wrapper.bxSlider(
+            initBxSlider(bxExtra, true)
+          );
+        } else {
+          if (bxExtra.bx !== null) {
+            bxExtra.bx.destroySlider();
+            bxExtra.bx = null;
+          }
+        }
+      } else {
+        if (checkBxSlider(bxExtra)) {
+          bxExtra.bx.reloadSlider(initBxSlider(bxExtra, true));
+        } else {
+          bxExtra.bx.destroySlider();
+          bxExtra.bx = null;
         }
       }
     });

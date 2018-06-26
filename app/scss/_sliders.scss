@@ -66,16 +66,16 @@
   &--firstColor {
     .bx-wrapper {
       .bx-prev, .bx-next {
-        color: $firstColor;
+        color: $secondColor;
         [class^="icon-"] {
-          border-color: $firstColor;
+          border-color: $secondColor;
         }
       }
       .bx-pager {
         &.bx-default-pager {
           a {
             &.active {
-              background-color: $firstColor;
+              background-color: $secondColor;
             }
           }
         }

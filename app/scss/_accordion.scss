@@ -58,6 +58,7 @@
       li {
         text-align: right;
         @media screen and (max-width: 767px) {
+          flex: 1 0 auto;
           text-align: left;
         }
         a {
@@ -122,4 +123,19 @@
 }
 .Accordion__content {
   padding: 1rem;
+}
+.Accordion__figure {
+  img {
+    &:first-child {
+      margin-right: 1.5rem;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 1.5rem;
+        margin-right: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
