@@ -11354,9 +11354,9 @@ li {
     @media screen and (max-width: 767px) {
       .Tabs__list--border {
         border-bottom: none; } }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 991px) {
     .Tabs__list {
-      margin-bottom: .8rem; } }
+      margin-bottom: 0; } }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .Tabs__list {
       -ms-flex-pack: distribute;
@@ -11368,9 +11368,11 @@ li {
   text-align: center; }
   .Tabs__list__item:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 991px) {
+    .Tabs__list__item {
+      margin-bottom: .8rem; } }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     .Tabs__list__item {
-      margin-bottom: .8rem;
       margin-right: 0; } }
 
 .Tabs__list__link {
@@ -11391,7 +11393,8 @@ li {
       border-color: #e14e3f; }
   @media screen and (max-width: 991px) {
     .Tabs__list__link {
-      font-size: 1rem; } }
+      font-size: 1rem;
+      padding: .8rem 1rem; } }
 
 .Tabs__content {
   padding: 1rem; }

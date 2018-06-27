@@ -45,8 +45,8 @@
       border-bottom: none;
     }
   }
-  @media screen and (max-width: 767px) {
-    margin-bottom: .8rem;
+  @media screen and (max-width: 991px) {
+    margin-bottom: 0;
   }
   @media screen and (max-width: 767px) and (orientation: portrait) {
     justify-content: space-around;
@@ -59,8 +59,10 @@
   &:last-child {
     margin-right: 0;
   }
-  @media screen and (max-width: 767px) and (orientation: portrait) {
+  @media screen and (max-width: 991px) {
     margin-bottom: .8rem;
+  }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
     margin-right: 0;
   }
 }
@@ -85,6 +87,7 @@
   }
   @media screen and (max-width: 991px) {
     font-size: 1rem;
+    padding: .8rem 1rem;
   }
 }
 .Tabs__content {
