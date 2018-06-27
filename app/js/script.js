@@ -32,13 +32,13 @@ function verifyMedia () {
         var $this = $(this),
             animation = $this.data('animation'),
             parent = $this.parent();
-          parent.addClass('animated ' + animation);
+         parent.addClass('animated ' + animation);
       },
       function () {
         var $this = $(this),
             animation = $this.data('animation'),
             parent = $this.parent();
-          parent.removeClass('animated ' + animation);
+         parent.removeClass('animated ' + animation);
       }
     );
     */
@@ -297,7 +297,7 @@ function initMap() {
     }
   },
       bxAcademico = {
-    wrapper: $('.academico-slider'),
+    wrapper: $('.academicos-slider'),
     bx: null,
     margin: 15,
     media: {

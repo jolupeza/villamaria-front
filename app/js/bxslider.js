@@ -58,7 +58,7 @@
         }
       },
       bxAcademico = {
-        wrapper: $('.academico-slider'),
+        wrapper: $('.academicos-slider'),
         bx: null,
         margin: 15,
         media: {

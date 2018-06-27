@@ -11287,20 +11287,23 @@ li {
 .Accordion__content {
   padding: 1rem; }
 
-.Accordion__figure img:first-child {
-  margin-right: 1.5rem; }
-  @media screen and (max-width: 767px) {
-    .Accordion__figure img:first-child {
-      margin-bottom: 1.5rem;
-      margin-right: 0; } }
-
-@media screen and (max-width: 767px) {
-  .Accordion__figure {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; } }
+.Accordion__figure {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .Accordion__figure img:first-child {
+    margin-right: 1.5rem; }
+    @media screen and (max-width: 991px) {
+      .Accordion__figure img:first-child {
+        margin-bottom: 1.5rem;
+        margin-right: 0; } }
+  @media screen and (max-width: 991px) {
+    .Accordion__figure {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .Tabs {
   margin: 1.5rem 0; }
