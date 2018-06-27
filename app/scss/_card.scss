@@ -27,6 +27,7 @@
       position: relative;
       text-align: left;
       width: 100%;
+      white-space: initial;
       z-index: 9;
       @media screen and (max-width: 991px) {
         font-size: 1rem;
