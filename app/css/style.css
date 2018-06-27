@@ -11145,7 +11145,11 @@ li {
     margin-right: 2rem; }
     @media screen and (max-width: 767px) {
       .Breadcrumb li {
-        margin-right: .5rem; } }
+        font-size: 1rem;
+        margin-right: 0; } }
+    @media screen and (max-width: 575px) {
+      .Breadcrumb li {
+        font-size: .875rem; } }
     .Breadcrumb li:last-child {
       margin-right: 0; }
   .Breadcrumb .active {
@@ -11154,7 +11158,7 @@ li {
     margin-right: 2rem; }
     @media screen and (max-width: 767px) {
       .Breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-        margin-right: .5em; } }
+        margin-right: 0; } }
   .Breadcrumb .breadcrumb-item a {
     color: #252525;
     font-weight: 300; }
@@ -11323,25 +11327,27 @@ li {
         color: #e14e3f; }
         .Tabs__list--border .Tabs__list__link.active:after, .Tabs__list--border .Tabs__list__link:focus:after, .Tabs__list--border .Tabs__list__link:hover:after {
           border-bottom-color: #e14e3f; }
-  @media screen and (max-width: 991px) {
+    @media screen and (max-width: 767px) {
+      .Tabs__list--border {
+        border-bottom: none; } }
+  @media screen and (max-width: 767px) {
     .Tabs__list {
-      -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      margin-bottom: 1rem;
-      overflow: auto;
-      padding-bottom: 1.2rem; } }
+      margin-bottom: .8rem; } }
+  @media screen and (max-width: 767px) and (orientation: portrait) {
+    .Tabs__list {
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin-bottom: 0; } }
 
 .Tabs__list__item {
   margin-right: 2rem;
   text-align: center; }
   .Tabs__list__item:last-child {
     margin-right: 0; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) and (orientation: portrait) {
     .Tabs__list__item {
-      margin-right: 1rem; } }
+      margin-bottom: .8rem;
+      margin-right: 0; } }
 
 .Tabs__list__link {
   border: 1px solid #1f376c;
