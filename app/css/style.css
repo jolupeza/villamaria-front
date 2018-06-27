@@ -10063,7 +10063,7 @@ body {
     body.admin-bar .Header--scroll {
       top: 0; }
   body.category .Page--padding, body.single .Page--padding {
-    padding-top: 80px; }
+    padding-top: 100px; }
 
 a {
   color: #348fce;
