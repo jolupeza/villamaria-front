@@ -11292,10 +11292,12 @@ li {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  .Accordion__figure img:first-child {
-    margin-right: 1.5rem; }
+  .Accordion__figure img {
+    margin-right: .8rem; }
+    .Accordion__figure img:last-child {
+      margin-right: 0; }
     @media screen and (max-width: 991px) {
-      .Accordion__figure img:first-child {
+      .Accordion__figure img {
         margin-bottom: 1.5rem;
         margin-right: 0; } }
   @media screen and (max-width: 991px) {

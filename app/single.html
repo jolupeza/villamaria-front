@@ -10,15 +10,18 @@
 <body class="single">
   <header class="Header">
     <div class="container">
+      <button class="d-lg-none Header__sidebar js-sidebar">
+        <i class="icon-bars"></i>
+      </button>
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="col-lg-3">
           <h1 class="Header__logo text-center mb-0" data-image="images/logo.png" data-imagehover="images/logo-hover.png">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-9">
+        <div class="d-none d-lg-block col-9">
           <aside class="Header__top">
             <nav class="Header__navTop">
               <ul class="Header__menuTop">
@@ -59,7 +62,7 @@
           </nav>
         </div>
       </div>
-      <nav class="Header__navMain mt-3" id="js-main-menu">
+      <nav class="d-none d-lg-block Header__navMain mt-3" id="js-main-menu">
         <ul class="Header__listMain">
           <li><a href="colegio.html">El colegio</a></li>
           <li><a href="propuesta.html">Propuesta formativa</a></li>
@@ -72,10 +75,30 @@
     </div>
   </header>
 
+  <aside class="Sidebar">
+    <button class="Sidebar__close js-sidebar"><i class="icon-close"></i></button>
+    <h1 class="Sidebar__logo text-right">
+      <a href="index.html" title="Colegio Villa María - Miraflores">
+        <img class="img-fluid" src="./images/logo.png" alt="Colegio Villa María - Miraflores" />
+      </a>
+    </h1>
+    <nav class="Sidebar__nav">
+      <ul class="Sidebar__list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="colegio.html">El colegio</a></li>
+        <li><a href="propuesta.html">Propuesta Educativa</a></li>
+        <li><a href="pastoral.html">Pastoral</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li class="current-category-ancestor"><a href="vidaescolar.html">Vida Escolar</a></li>
+        <li><a href="ubicanos.html">Ubícanos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
   <section class="Page Page--padding">
     <div class="container">
       <div class="row align-items-center mb-5">
-        <div class="col-6">
+        <div class="col-lg-6">
           <h2 class="h4 Page__title text-uppercase"><span>Vida escolar</span></h2>
           <h3 class="Page__subtitle text-uppercase">Nuestros <span>momentos</span></h3>
 
@@ -83,7 +106,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non ex illum ut. Ratione doloribus laborum sapiente est neque nulla, quo delectus facere eaque? Et tempore doloribus corporis itaque, delectus magni!</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ad quae et, autem nemo fugiat exercitationem! Voluptatum atque deleniti illo aliquam cum quae officia, natus iure, ab, modi qui praesentium.</p>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
           <figure class="Page__figure text-center mb-0">
             <img src="images/vida-escolar.jpg" alt="Vida Escolar" class="img-fluid" />
           </figure>
@@ -96,12 +119,13 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat provident illo nihil doloremque alias mollitia, eligendi nam fuga quia omnis. Voluptates repellendus veritatis facere similique ratione perferendis veniam omnis natus.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores aperiam et assumenda temporibus atque maxime quidem tenetur inventore libero blanditiis culpa id voluptate molestias, quia eos quae possimus est reiciendis.</p>
 
-          <p class="text-center mb-5">
-            <img src="images/single01.jpg" alt="" class="img-fluid" />
-            <img src="images/single02.jpg" alt="" class="img-fluid" />
-            <img src="images/single03.jpg" alt="" class="img-fluid" />
-            <img src="images/single03.jpg" alt="" class="img-fluid" />
+          <p class="d-flex Accordion__figure">
+            <img src="images/single01.jpg" alt="" class="img-fluid">
+            <img src="images/single02.jpg" alt="" class="img-fluid">
+            <img src="images/single03.jpg" alt="" class="img-fluid">
+            <img src="images/single03.jpg" alt="" class="img-fluid">
           </p>
+
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt quae facilis excepturi laboriosam labore vero sequi quod, porro numquam. Atque maiores architecto suscipit, laudantium quasi, deleniti nulla! Blanditiis, odit, saepe.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis molestias libero at atque consequuntur iste numquam rerum illo, quasi officia ullam explicabo natus voluptatem cum reiciendis a temporibus doloremque magnam.</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, quisquam, cumque ea eligendi doloribus odit fugit est repudiandae accusamus laborum atque explicabo fugiat. Placeat maiores repellendus nostrum saepe iusto, suscipit!</p>
@@ -111,7 +135,7 @@
       <h3 class="Page__subtitle text-uppercase mt-5 text-center">Oportunidades para <span>compartir</span></h3>
 
       <div class="row">
-        <div class="col-4">
+        <div class="col-md-6 col-lg-4">
           <article class="Card mb-5">
             <figure class="Card__feature text-center">
               <img src="images/post-thumb.jpg" alt="" class="img-fluid" />
@@ -126,7 +150,7 @@
             </div>
           </article>
         </div>
-        <div class="col-4">
+        <div class="col-md-6 col-lg-4">
           <article class="Card mb-5">
             <figure class="Card__feature text-center">
               <img src="images/post-thumb.jpg" alt="" class="img-fluid" />
@@ -141,7 +165,7 @@
             </div>
           </article>
         </div>
-        <div class="col-4">
+        <div class="col-md-6 col-lg-4">
           <article class="Card mb-5">
             <figure class="Card__feature text-center">
               <img src="images/post-thumb.jpg" alt="" class="img-fluid" />
@@ -163,7 +187,7 @@
   <footer class="Footer">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list text-uppercase">
               <li><a href="#">Apafa</a></li>
@@ -172,14 +196,14 @@
             </ul>
           </nav>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6">
           <h1 class="Footer__logo text-center">
             <a class="d-block" href="index.html" title="Colegio Villa María - Miraflores">
               <img class="img-fluid" src="images/logo.png" alt="Colegio Villa María - Miraflores" />
             </a>
           </h1>
         </div>
-        <div class="col-3">
+        <div class="d-none d-lg-block col-3">
           <nav class="Footer__nav">
             <ul class="Footer__list">
               <li><i class="icon-phone"></i> 445-0547 / 445-3592</li>

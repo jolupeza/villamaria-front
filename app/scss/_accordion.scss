@@ -127,12 +127,13 @@
 .Accordion__figure {
   justify-content: space-between;
   img {
-    &:first-child {
-      margin-right: 1.5rem;
-      @media screen and (max-width: 991px) {
-        margin-bottom: 1.5rem;
-        margin-right: 0;
-      }
+    margin-right: .8rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    @media screen and (max-width: 991px) {
+      margin-bottom: 1.5rem;
+      margin-right: 0;
     }
   }
   @media screen and (max-width: 991px) {
