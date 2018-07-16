@@ -32,13 +32,13 @@ function verifyMedia () {
         var $this = $(this),
             animation = $this.data('animation'),
             parent = $this.parent();
-          parent.addClass('animated ' + animation);
+         parent.addClass('animated ' + animation);
       },
       function () {
         var $this = $(this),
             animation = $this.data('animation'),
             parent = $this.parent();
-          parent.removeClass('animated ' + animation);
+         parent.removeClass('animated ' + animation);
       }
     );
     */
@@ -683,5 +683,27 @@ function initMap() {
 
     return config;
   };
+})(jQuery);
+"use strict";
+
+;(function ($) {
+  $(function () {
+    if (window.location.hash) {
+      var idAdmision = window.location.hash,
+          objAdmision = $(window.location.hash),
+          hashValue = window.location.hash.replace('#', ''),
+          typeAdmision = hashValue.split('-')[1];
+
+      if (objAdmision.length) {
+        $('#tabsAdmision a[href="#' + typeAdmision + '"]').tab('show');
+
+        setTimeout(function () {
+          $('html, body').stop().animate({
+            scrollTop: $(idAdmision).offset().top
+          }, 800);
+        }, 500);
+      }
+    }
+  });
 })(jQuery);
 //# sourceMappingURL=script.js.map

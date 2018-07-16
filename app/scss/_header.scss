@@ -18,11 +18,6 @@
             color: $thirdColor;
           }
         }
-        &.active {
-          a {
-            color: $thirdColor;
-          }
-        }
       }
     }
     .Header__menuTop__submenu {
@@ -127,9 +122,9 @@
         color: $darkColor;
       }
     }
-    &.active {
+    &.active, &.current-menu-item {
       a {
-        color: $darkColor;
+        color: $thirdColor;
       }
     }
   }

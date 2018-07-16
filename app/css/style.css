@@ -10400,8 +10400,6 @@ li {
       color: #2f2f2f; }
       .Header--scroll .Header__menuTop li a:focus, .Header--scroll .Header__menuTop li a:hover {
         color: #e14e3f; }
-    .Header--scroll .Header__menuTop li.active a {
-      color: #e14e3f; }
     .Header--scroll .Header__menuTop__submenu {
       background-color: #afafaf; }
       .Header--scroll .Header__menuTop__submenu::before {
@@ -10491,8 +10489,8 @@ li {
       justify-content: center; }
       .Header__menuTop li a:focus, .Header__menuTop li a:hover {
         color: #2f2f2f; }
-    .Header__menuTop li.active a {
-      color: #2f2f2f; }
+    .Header__menuTop li.active a, .Header__menuTop li.current-menu-item a {
+      color: #e14e3f; }
 
 .Header__menuTop__submenu {
   background-color: rgba(255, 255, 255, 0.88);
